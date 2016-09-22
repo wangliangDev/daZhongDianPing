@@ -2,13 +2,28 @@
 //  AppDelegate.m
 //  daZhongDianPing
 //
-//  Created by jinns on 16/8/4.
+//  Created by ttbb on 16/8/4.
 //  Copyright © 2016年 ttbb. All rights reserved.
 //
 
 #import "AppDelegate.h"
+#import "HomeViewController.h"
+#import "DiscountViewController.h"
+#import "DiscoverViewController.h"
+#import "MineViewController.h"
+#import "TTBBTabbarController.h"
 
-@interface AppDelegate ()
+
+
+@interface AppDelegate (){
+    
+    
+    HomeViewController *homeVC ;
+    DiscountViewController *discountVC;
+    DiscoverViewController *discoverVC;
+    MineViewController *mineVC;
+    TTBBTabbarController *tabbar;
+}
 
 @end
 
@@ -17,6 +32,40 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    homeVC = [[HomeViewController alloc]init];
+    UINavigationController *homeNav = [[UINavigationController alloc]initWithRootViewController:homeVC];
+    
+    discountVC = [[DiscountViewController alloc]init];
+    UINavigationController *discountNav = [[UINavigationController alloc]initWithRootViewController:discountVC];
+    
+    discoverVC = [[DiscoverViewController alloc]init];
+     UINavigationController *discoverNav = [[UINavigationController alloc]initWithRootViewController:discoverVC];
+    
+    mineVC = [[MineViewController alloc]init];
+    UINavigationController *mineNav = [[UINavigationController alloc]initWithRootViewController:mineVC];
+    
+    tabbar = [[TTBBTabbarController alloc]init];
+    
+    NSArray *array = @[homeNav,discountNav,discoverNav,mineNav];
+    
+    tabbar.buttonCount = (int)array.count;
+    tabbar.tabbarBgColor = RGB(248, 248, 248);
+    tabbar.titleNormalColor = [UIColor grayColor];
+    tabbar.titleSelectedColor = RGB(252, 91, 45);
+    
+    [tabbar creatButtonWithNormalName:@"dianping_24x24" andSelectName:@"dianping_pressed_24x24" andTitle:@"首页" andIndex:0 ];
+    
+    [tabbar creatButtonWithNormalName:@"found_24x24" andSelectName:@"found_pressed_24x24" andTitle:@"团购" andIndex:1 ];
+    
+    [tabbar creatButtonWithNormalName:@"group_24x24" andSelectName:@"group_pressed_24x24" andTitle:@"发现" andIndex:2 ];
+    
+    [tabbar creatButtonWithNormalName:@"my_24x24" andSelectName:@"my_pressed_24x24" andTitle:@"我的" andIndex:3  ];
+    tabbar.itemArray = array;
+    
+    
+    self.window.rootViewController = tabbar;
+    
     return YES;
 }
 

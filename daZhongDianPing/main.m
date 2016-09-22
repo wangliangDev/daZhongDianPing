@@ -2,7 +2,7 @@
 //  main.m
 //  daZhongDianPing
 //
-//  Created by jinns on 16/8/4.
+//  Created by ttbb on 16/8/4.
 //  Copyright © 2016年 ttbb. All rights reserved.
 //
 
