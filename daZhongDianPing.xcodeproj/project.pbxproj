@@ -25,6 +25,10 @@
 		F553624C1D543F15000FFD7E /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F55362491D543F15000FFD7E /* MineViewController.m */; };
 		F553624F1D546435000FFD7E /* HomeHeaderTypeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F553624E1D546435000FFD7E /* HomeHeaderTypeCell.m */; };
 		F5691C591D87AC60000E19A4 /* TTBBScrollViewButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F5691C581D87AC60000E19A4 /* TTBBScrollViewButton.m */; };
+		F56E879F1D93CA9C00F363C7 /* DXPopover.m in Sources */ = {isa = PBXBuildFile; fileRef = F56E879E1D93CA9C00F363C7 /* DXPopover.m */; };
+		F56E87A21D93CD2000F363C7 /* popTableview.m in Sources */ = {isa = PBXBuildFile; fileRef = F56E87A11D93CD2000F363C7 /* popTableview.m */; };
+		F56E87AE1D93DEB000F363C7 /* UserInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F56E87AD1D93DEB000F363C7 /* UserInfoCell.m */; };
+		F56E87B11D93E5AD00F363C7 /* normalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F56E87B01D93E5AD00F363C7 /* normalCell.m */; };
 		F59416F31D891FFA0004CD28 /* newDiscountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F59416F21D891FFA0004CD28 /* newDiscountCell.m */; };
 		F59DC4DD1D8E44FE0070F504 /* homeLikeListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F59DC4DC1D8E44FE0070F504 /* homeLikeListCell.m */; };
 		F59DC4E01D8E74D60070F504 /* homeLikeListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F59DC4DF1D8E74D60070F504 /* homeLikeListModel.m */; };
@@ -88,6 +92,14 @@
 		F553624E1D546435000FFD7E /* HomeHeaderTypeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeHeaderTypeCell.m; sourceTree = "<group>"; };
 		F5691C571D87AC60000E19A4 /* TTBBScrollViewButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTBBScrollViewButton.h; sourceTree = "<group>"; };
 		F5691C581D87AC60000E19A4 /* TTBBScrollViewButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTBBScrollViewButton.m; sourceTree = "<group>"; };
+		F56E879D1D93CA9C00F363C7 /* DXPopover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXPopover.h; sourceTree = "<group>"; };
+		F56E879E1D93CA9C00F363C7 /* DXPopover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXPopover.m; sourceTree = "<group>"; };
+		F56E87A01D93CD2000F363C7 /* popTableview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = popTableview.h; sourceTree = "<group>"; };
+		F56E87A11D93CD2000F363C7 /* popTableview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = popTableview.m; sourceTree = "<group>"; };
+		F56E87AC1D93DEB000F363C7 /* UserInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoCell.h; sourceTree = "<group>"; };
+		F56E87AD1D93DEB000F363C7 /* UserInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoCell.m; sourceTree = "<group>"; };
+		F56E87AF1D93E5AD00F363C7 /* normalCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = normalCell.h; sourceTree = "<group>"; };
+		F56E87B01D93E5AD00F363C7 /* normalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = normalCell.m; sourceTree = "<group>"; };
 		F59416F11D891FFA0004CD28 /* newDiscountCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = newDiscountCell.h; sourceTree = "<group>"; };
 		F59416F21D891FFA0004CD28 /* newDiscountCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = newDiscountCell.m; sourceTree = "<group>"; };
 		F59DC4DB1D8E44FE0070F504 /* homeLikeListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = homeLikeListCell.h; sourceTree = "<group>"; };
@@ -209,6 +221,7 @@
 		9B500A2B1D531393006E6A6D /* other */ = {
 			isa = PBXGroup;
 			children = (
+				F56E879B1D93CA4200F363C7 /* tool */,
 				F51F55461D911AD300E86329 /*  CustomView */,
 				9B500A331D531EE4006E6A6D /* BaseViewController */,
 				9B500A2E1D531413006E6A6D /* Constant.h */,
@@ -268,8 +281,8 @@
 			isa = PBXGroup;
 			children = (
 				F55362471D543F15000FFD7E /* Controller */,
-				F553624A1D543F15000FFD7E /* Model */,
-				F553624B1D543F15000FFD7E /* View */,
+				F56E87AA1D93DE8D00F363C7 /* Model */,
+				F56E87AB1D93DE8D00F363C7 /* View */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -380,16 +393,39 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		F553624A1D543F15000FFD7E /* Model */ = {
+		F56E879B1D93CA4200F363C7 /* tool */ = {
+			isa = PBXGroup;
+			children = (
+				F56E879C1D93CA9C00F363C7 /* DXPopover */,
+			);
+			path = tool;
+			sourceTree = "<group>";
+		};
+		F56E879C1D93CA9C00F363C7 /* DXPopover */ = {
+			isa = PBXGroup;
+			children = (
+				F56E87A01D93CD2000F363C7 /* popTableview.h */,
+				F56E87A11D93CD2000F363C7 /* popTableview.m */,
+				F56E879D1D93CA9C00F363C7 /* DXPopover.h */,
+				F56E879E1D93CA9C00F363C7 /* DXPopover.m */,
+			);
+			path = DXPopover;
+			sourceTree = "<group>";
+		};
+		F56E87AA1D93DE8D00F363C7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		F553624B1D543F15000FFD7E /* View */ = {
+		F56E87AB1D93DE8D00F363C7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F56E87AC1D93DEB000F363C7 /* UserInfoCell.h */,
+				F56E87AD1D93DEB000F363C7 /* UserInfoCell.m */,
+				F56E87AF1D93E5AD00F363C7 /* normalCell.h */,
+				F56E87B01D93E5AD00F363C7 /* normalCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -580,12 +616,16 @@
 				9B500A3C1D5325CF006E6A6D /* TTBBTabbarController.m in Sources */,
 				F553623A1D543E96000FFD7E /* HomeViewController.m in Sources */,
 				F59416F31D891FFA0004CD28 /* newDiscountCell.m in Sources */,
+				F56E87AE1D93DEB000F363C7 /* UserInfoCell.m in Sources */,
 				9B5009FB1D52EB6E006E6A6D /* AppDelegate.m in Sources */,
 				9B500A321D531817006E6A6D /* NetWorkRequestSingleton.m in Sources */,
 				F553624C1D543F15000FFD7E /* MineViewController.m in Sources */,
 				F5BDD2A61D890289005B42DB /* webViewController.m in Sources */,
+				F56E87A21D93CD2000F363C7 /* popTableview.m in Sources */,
 				F59DC4E01D8E74D60070F504 /* homeLikeListModel.m in Sources */,
+				F56E87B11D93E5AD00F363C7 /* normalCell.m in Sources */,
 				F553624F1D546435000FFD7E /* HomeHeaderTypeCell.m in Sources */,
+				F56E879F1D93CA9C00F363C7 /* DXPopover.m in Sources */,
 				F5691C591D87AC60000E19A4 /* TTBBScrollViewButton.m in Sources */,
 				F55362401D543ED1000FFD7E /* DiscoverViewController.m in Sources */,
 				9B5009F81D52EB6E006E6A6D /* main.m in Sources */,

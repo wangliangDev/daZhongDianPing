@@ -13,7 +13,8 @@
 #import "webViewController.h"
 #import "homeLikeListModel.h"
 #import "homeLikeListCell.h"
-
+#import "DXPopover.h"
+#import "popTableview.h"
 
 #define HEADERTYPECELL @"HomeHeaderTypeCell"
 #define NEWDISCOUNTCELL @"NewDicountCell"
@@ -29,9 +30,9 @@
     NSMutableArray *dataArray;
     
     UIButton *funButton;
-    
+  
 }
-
+@property (nonatomic, strong) DXPopover *popover;
 @end
 
 
@@ -110,18 +111,17 @@
 
 -(void)createLeftButton
 {
+   
     
     funButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    funButton.frame = CGRectMake(0, 0, 40, 40);
-    [funButton setBackgroundImage:[UIImage imageNamed:@"1.png"] forState:UIControlStateNormal];
+    funButton.frame = CGRectMake(0, 0, 25, 25);
+    [funButton setBackgroundImage:[UIImage imageNamed:@"home_add"] forState:UIControlStateNormal];
     [funButton addTarget:self action:@selector(popfun) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *buttonItem = [[UIBarButtonItem alloc]initWithCustomView:funButton];
     self.navigationItem.rightBarButtonItem = buttonItem;
     
-    
+  
 }
-
-
 
 
 #pragma mark -- UITableViewDelegate
@@ -259,7 +259,19 @@
 -(void)popfun
 {
     
+    NSArray *array = @[@"写点评",@"添加商户",@"扫一扫",@"付款码"];
+    NSArray *imageArray = @[@"mc_wecard",@"mc_wecard",@"mc_wecard",@"mc_wecard"];
     
+    popTableview  *pop = [[popTableview alloc]initWithFrame:CGRectMake(0, 0, 120, array.count * 44) array:array imageArray:imageArray];
+    self.popover = [DXPopover new];
+    self.popover.backgroundColor = [UIColor whiteColor];
+    
+    CGPoint startPoint = CGPointMake(CGRectGetMidX(funButton.frame), CGRectGetMaxY(funButton.frame) + 25);
+    [self.popover showAtPoint:startPoint
+               popoverPostion:DXPopoverPositionDown
+              withContentView:pop
+                       inView:self.tabBarController.view];
+
 }
 
 
