@@ -19,6 +19,10 @@
 		9B500A321D531817006E6A6D /* NetWorkRequestSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B500A311D531817006E6A6D /* NetWorkRequestSingleton.m */; };
 		9B500A361D531F37006E6A6D /* ShopBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B500A351D531F37006E6A6D /* ShopBaseNavigationController.m */; };
 		9B500A3C1D5325CF006E6A6D /* TTBBTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B500A3B1D5325CF006E6A6D /* TTBBTabbarController.m */; };
+		F53353601D95090E00F42801 /* UserInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F533535F1D95090E00F42801 /* UserInfoManager.m */; };
+		F53353631D9509F500F42801 /* UserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F53353621D9509F500F42801 /* UserInfoModel.m */; };
+		F53353661D950F2800F42801 /* fileCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F53353651D950F2800F42801 /* fileCacheManager.m */; };
+		F53353691D951B1200F42801 /* DZLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F53353681D951B1200F42801 /* DZLoginViewController.m */; };
 		F553623A1D543E96000FFD7E /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F55362371D543E96000FFD7E /* HomeViewController.m */; };
 		F55362401D543ED1000FFD7E /* DiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F553623D1D543ED1000FFD7E /* DiscoverViewController.m */; };
 		F55362461D543EF7000FFD7E /* DiscountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F55362431D543EF7000FFD7E /* DiscountViewController.m */; };
@@ -29,6 +33,7 @@
 		F56E87A21D93CD2000F363C7 /* popTableview.m in Sources */ = {isa = PBXBuildFile; fileRef = F56E87A11D93CD2000F363C7 /* popTableview.m */; };
 		F56E87AE1D93DEB000F363C7 /* UserInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F56E87AD1D93DEB000F363C7 /* UserInfoCell.m */; };
 		F56E87B11D93E5AD00F363C7 /* normalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F56E87B01D93E5AD00F363C7 /* normalCell.m */; };
+		F57BAC211D98C5F4002A145E /* MineTypeButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F57BAC201D98C5F4002A145E /* MineTypeButtonCell.m */; };
 		F59416F31D891FFA0004CD28 /* newDiscountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F59416F21D891FFA0004CD28 /* newDiscountCell.m */; };
 		F59DC4DD1D8E44FE0070F504 /* homeLikeListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F59DC4DC1D8E44FE0070F504 /* homeLikeListCell.m */; };
 		F59DC4E01D8E74D60070F504 /* homeLikeListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F59DC4DF1D8E74D60070F504 /* homeLikeListModel.m */; };
@@ -80,6 +85,14 @@
 		9B500A3A1D5325CF006E6A6D /* TTBBTabbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTBBTabbarController.h; sourceTree = "<group>"; };
 		9B500A3B1D5325CF006E6A6D /* TTBBTabbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTBBTabbarController.m; sourceTree = "<group>"; };
 		DC9F9EBE81FCDBEF0F6D8CD8 /* Pods-daZhongDianPing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-daZhongDianPing.debug.xcconfig"; path = "Pods/Target Support Files/Pods-daZhongDianPing/Pods-daZhongDianPing.debug.xcconfig"; sourceTree = "<group>"; };
+		F533535E1D95090E00F42801 /* UserInfoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoManager.h; sourceTree = "<group>"; };
+		F533535F1D95090E00F42801 /* UserInfoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoManager.m; sourceTree = "<group>"; };
+		F53353611D9509F500F42801 /* UserInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoModel.h; sourceTree = "<group>"; };
+		F53353621D9509F500F42801 /* UserInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoModel.m; sourceTree = "<group>"; };
+		F53353641D950F2800F42801 /* fileCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fileCacheManager.h; sourceTree = "<group>"; };
+		F53353651D950F2800F42801 /* fileCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = fileCacheManager.m; sourceTree = "<group>"; };
+		F53353671D951B1200F42801 /* DZLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZLoginViewController.h; sourceTree = "<group>"; };
+		F53353681D951B1200F42801 /* DZLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZLoginViewController.m; sourceTree = "<group>"; };
 		F55362361D543E96000FFD7E /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		F55362371D543E96000FFD7E /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		F553623C1D543ED1000FFD7E /* DiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverViewController.h; sourceTree = "<group>"; };
@@ -100,6 +113,8 @@
 		F56E87AD1D93DEB000F363C7 /* UserInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoCell.m; sourceTree = "<group>"; };
 		F56E87AF1D93E5AD00F363C7 /* normalCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = normalCell.h; sourceTree = "<group>"; };
 		F56E87B01D93E5AD00F363C7 /* normalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = normalCell.m; sourceTree = "<group>"; };
+		F57BAC1F1D98C5F4002A145E /* MineTypeButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineTypeButtonCell.h; sourceTree = "<group>"; };
+		F57BAC201D98C5F4002A145E /* MineTypeButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineTypeButtonCell.m; sourceTree = "<group>"; };
 		F59416F11D891FFA0004CD28 /* newDiscountCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = newDiscountCell.h; sourceTree = "<group>"; };
 		F59416F21D891FFA0004CD28 /* newDiscountCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = newDiscountCell.m; sourceTree = "<group>"; };
 		F59DC4DB1D8E44FE0070F504 /* homeLikeListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = homeLikeListCell.h; sourceTree = "<group>"; };
@@ -389,6 +404,8 @@
 			children = (
 				F55362481D543F15000FFD7E /* MineViewController.h */,
 				F55362491D543F15000FFD7E /* MineViewController.m */,
+				F53353671D951B1200F42801 /* DZLoginViewController.h */,
+				F53353681D951B1200F42801 /* DZLoginViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -397,6 +414,10 @@
 			isa = PBXGroup;
 			children = (
 				F56E879C1D93CA9C00F363C7 /* DXPopover */,
+				F533535E1D95090E00F42801 /* UserInfoManager.h */,
+				F533535F1D95090E00F42801 /* UserInfoManager.m */,
+				F53353641D950F2800F42801 /* fileCacheManager.h */,
+				F53353651D950F2800F42801 /* fileCacheManager.m */,
 			);
 			path = tool;
 			sourceTree = "<group>";
@@ -415,6 +436,8 @@
 		F56E87AA1D93DE8D00F363C7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F53353611D9509F500F42801 /* UserInfoModel.h */,
+				F53353621D9509F500F42801 /* UserInfoModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -426,6 +449,8 @@
 				F56E87AD1D93DEB000F363C7 /* UserInfoCell.m */,
 				F56E87AF1D93E5AD00F363C7 /* normalCell.h */,
 				F56E87B01D93E5AD00F363C7 /* normalCell.m */,
+				F57BAC1F1D98C5F4002A145E /* MineTypeButtonCell.h */,
+				F57BAC201D98C5F4002A145E /* MineTypeButtonCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -611,21 +636,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F53353691D951B1200F42801 /* DZLoginViewController.m in Sources */,
 				F59DC4DD1D8E44FE0070F504 /* homeLikeListCell.m in Sources */,
 				9B5009FE1D52EB6E006E6A6D /* ViewController.m in Sources */,
 				9B500A3C1D5325CF006E6A6D /* TTBBTabbarController.m in Sources */,
 				F553623A1D543E96000FFD7E /* HomeViewController.m in Sources */,
+				F53353601D95090E00F42801 /* UserInfoManager.m in Sources */,
 				F59416F31D891FFA0004CD28 /* newDiscountCell.m in Sources */,
+				F53353631D9509F500F42801 /* UserInfoModel.m in Sources */,
 				F56E87AE1D93DEB000F363C7 /* UserInfoCell.m in Sources */,
 				9B5009FB1D52EB6E006E6A6D /* AppDelegate.m in Sources */,
 				9B500A321D531817006E6A6D /* NetWorkRequestSingleton.m in Sources */,
 				F553624C1D543F15000FFD7E /* MineViewController.m in Sources */,
 				F5BDD2A61D890289005B42DB /* webViewController.m in Sources */,
+				F53353661D950F2800F42801 /* fileCacheManager.m in Sources */,
 				F56E87A21D93CD2000F363C7 /* popTableview.m in Sources */,
 				F59DC4E01D8E74D60070F504 /* homeLikeListModel.m in Sources */,
 				F56E87B11D93E5AD00F363C7 /* normalCell.m in Sources */,
 				F553624F1D546435000FFD7E /* HomeHeaderTypeCell.m in Sources */,
 				F56E879F1D93CA9C00F363C7 /* DXPopover.m in Sources */,
+				F57BAC211D98C5F4002A145E /* MineTypeButtonCell.m in Sources */,
 				F5691C591D87AC60000E19A4 /* TTBBScrollViewButton.m in Sources */,
 				F55362401D543ED1000FFD7E /* DiscoverViewController.m in Sources */,
 				9B5009F81D52EB6E006E6A6D /* main.m in Sources */,

@@ -7,13 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "UserInfoModel.h"
 @interface UserInfoCell : UITableViewCell{
     
     
-    UIImageView *userIcon;
-    UILabel *userNameLabel;
+   
+   
     
 }
-
+@property(nonatomic,strong)UserInfoModel *userModel;
+@property(nonatomic,strong) UIImageView *userIcon;
+@property(nonatomic,strong) UILabel *userNameLabel;
 @end

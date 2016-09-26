@@ -9,9 +9,13 @@
 #import "MineViewController.h"
 #import "UserInfoCell.h"
 #import "normalCell.h"
+#import "UserInfoManager.h"
+#import "DZLoginViewController.h"
+#import "MineTypeButtonCell.h"
 
 #define USERINFOCELL @"UserInfoCell"
 #define NORMALCELL @"normalCell"
+#define TYPEBUTTONCELL @"MineTypeButtonCell"
 
 @interface MineViewController ()<UITableViewDelegate,UITableViewDataSource>{
     
@@ -22,6 +26,8 @@
     NSArray *section3;
     NSArray *section4;
     NSArray *section5;
+    NSArray *dataArray;
+    NSArray *dataArray2;
 }
 
 
@@ -36,19 +42,28 @@
 {
     
     self.view.backgroundColor = kWhiteColor;
-    [self.navigationController setNavigationBarHidden:YES];
+   
     
     [self initObject];
     [self createTableView];
 }
-
+-(void)viewWillAppear:(BOOL)animated
+{
+     [self.navigationController setNavigationBarHidden:YES];
+}
 -(void)initObject{
     
      section3 = @[@"我的团购券",@"我的卡券",@"我的钱包",@"我的积分"];
      section4 = @[@"待点评",@"最近浏览",@"联系客服",@"设置"];
      section5 = @[@"我是商家"];
     
+     dataArray = @[@{@"icon": @"mc_wecard", @"text":@"我的点评", @"color": kWhiteColor},
+                   @{@"icon": @"mc_wecard", @"text": @"我的收藏", @"color": kWhiteColor},
+                   @{@"icon": @"mc_wecard", @"text": @"我的好友", @"color": kWhiteColor}];
     
+    dataArray2 = @[@{@"icon": @"mc_wecard", @"text":@"待付款", @"color": kBlackColor},
+                  @{@"icon": @"mc_wecard", @"text": @"可使用", @"color": kBlackColor},
+                  @{@"icon": @"mc_wecard", @"text": @"退款/售后", @"color": kBlackColor}];
     
 }
 -(void)createTableView
@@ -104,12 +119,20 @@
 {
     if (indexPath.section == 0) {
         
-        return 150;
+        return 110;
         
-    }else{
+    }else if (indexPath.section == 1)
+    {
         
-        return 44;
+        if (indexPath.row == 0 || indexPath.row == 2)
+        {
+            
+            return 60;
+        }
+        
     }
+    
+    return 44;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
@@ -130,12 +153,26 @@
     
     if (indexPath.section == 0) {
         
-        UserInfoCell *userInfoCell = [[UserInfoCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:USERINFOCELL];
-        theCell = userInfoCell;
+        UserInfoCell *Cell = [[UserInfoCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:USERINFOCELL];
+        
+        if ([UserInfoManager shardManager].isLogin) {
+            
+            Cell.userModel = [[UserInfoManager shardManager]getUserInfo];
+            
+        }
+        
+        theCell = Cell;
         
     }else if (indexPath.section == 1){
         
-        if (indexPath.row == 1) {
+        if (indexPath.row == 0) {
+           
+            MineTypeButtonCell *cell = [[MineTypeButtonCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:TYPEBUTTONCELL];
+            cell.backgroundColor = RGB(149, 107, 39);
+            cell.buttonArray = dataArray;
+            theCell = cell;
+            
+        }else if (indexPath.row == 1) {
             
             normalCell *cell = [[normalCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:NORMALCELL];
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
@@ -145,8 +182,9 @@
         }else{
            
             
-            normalCell *cell = [[normalCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:NORMALCELL];
-            cell.title = @"我的订单";
+            MineTypeButtonCell *cell = [[MineTypeButtonCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:TYPEBUTTONCELL];
+            cell.backgroundColor = kWhiteColor;
+            cell.buttonArray = dataArray2;
             theCell = cell;
 
         }
@@ -184,10 +222,42 @@
         theCell = cell;
         
     }
-    
+    theCell.selectionStyle = UITableViewCellSelectionStyleNone;
     return theCell;
     
 }
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    
+    if (indexPath.section == 0) {
+        
+        if ([UserInfoManager shardManager].isLogin) {
+            
+            
+        }else{
+            
+            
+            DZLoginViewController *loginViewcontrol = [[DZLoginViewController alloc]init];
+            
+            UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:loginViewcontrol];
+           
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+              
+                [self presentViewController:nav animated:YES completion:nil];
+                
+
+            });
+            
+            
+        }
+    }
+    
+}
+
 
 @end
 

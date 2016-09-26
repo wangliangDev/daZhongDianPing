@@ -58,7 +58,6 @@
 #define kIntegerToStr(i) [NSString stringWithFormat: @"%ld", i]
 #define kValidStr(str) [NHUtils validString:str]
 
-
-
+#define LOGINFLAG @"loginFlag"
 
 #endif /* Constant_h */

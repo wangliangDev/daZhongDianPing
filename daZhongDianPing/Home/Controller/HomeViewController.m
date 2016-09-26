@@ -260,7 +260,7 @@
 {
     
     NSArray *array = @[@"写点评",@"添加商户",@"扫一扫",@"付款码"];
-    NSArray *imageArray = @[@"mc_wecard",@"mc_wecard",@"mc_wecard",@"mc_wecard"];
+    NSArray *imageArray = @[@"movie_review",@"mc_wecard",@"shortcut_scan",@"movie_qrcode"];
     
     popTableview  *pop = [[popTableview alloc]initWithFrame:CGRectMake(0, 0, 120, array.count * 44) array:array imageArray:imageArray];
     self.popover = [DXPopover new];

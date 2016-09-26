@@ -8,6 +8,9 @@
 
 #import "UserInfoCell.h"
 
+
+
+
 @implementation UserInfoCell
 
 - (void)awakeFromNib {
@@ -24,25 +27,55 @@
         
         self.backgroundColor = RGB(194, 150, 81);
         
-        userIcon = [UIImageView new];
-        userIcon.image = [UIImage imageNamed:@"1.png"];
-        [self.contentView addSubview:userIcon];
+      
+        [self.contentView addSubview:self.userNameLabel];
+        [self.contentView addSubview:self.userIcon];
         
-        [userIcon mas_makeConstraints:^(MASConstraintMaker *make) {
-            
-            make.left.equalTo(self).offset(50);
-            make.top.equalTo(self).offset(50);
-            make.width.height.equalTo(@50);
-        }];
         
-        userIcon.layer.masksToBounds = YES;
-        userIcon.layer.cornerRadius = userIcon.frame.size.width / 2;
+        
+        
     }
     
     return self;
 }
 
+-(void)setUserModel:(UserInfoModel *)userModel
+{
+    
+    _userModel = userModel;
+    
+    [_userIcon sd_setImageWithURL:[NSURL URLWithString:userModel.userIconUrl]];
+    _userNameLabel.text = userModel.userName;
+}
 
+-(UILabel*)userNameLabel
+{
+    if (!_userNameLabel) {
+        
+        _userNameLabel = [UILabel new];
+        _userNameLabel.text = @"点击登录";
+        _userNameLabel.textColor = kWhiteColor;
+        _userNameLabel.font =kBoldFont(15);
+        _userNameLabel.frame = CGRectMake(CGRectGetMaxX(self.userIcon.frame) +30, 50, 100, 20);
+    }
+    
+    return _userNameLabel;
+}
+-(UIImageView*)userIcon
+{
+    if (!_userIcon) {
+        
+        _userIcon = [UIImageView new];
+        _userIcon.image = [UIImage imageNamed:@"userDefault"];
+        _userIcon.frame = CGRectMake(50, 50, 50, 50);
+        _userIcon.layer.masksToBounds = YES;
+        _userIcon.layer.borderColor = kWhiteColor.CGColor;
+        _userIcon.layer.borderWidth = 1;
+        _userIcon.layer.cornerRadius = _userIcon.frame.size.width / 2;
+    }
+    
+    return _userIcon;
+}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
