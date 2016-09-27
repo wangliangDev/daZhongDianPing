@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ShopBaseNavigationController : UINavigationController
+@interface BaseNavigationController : UIViewController
 
 @end

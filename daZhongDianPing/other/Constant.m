@@ -1,24 +1,13 @@
 //
-//  Constant.h
+//  Constant.m
 //  daZhongDianPing
 //
 //  Created by ttbb on 16/9/26.
 //  Copyright © 2016年 ttbb. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "Constant.h"
 
-@interface Constant : NSObject{
-    
-  
-}
-    
-
-
-
-
-
-
-
+@implementation Constant
 
 @end

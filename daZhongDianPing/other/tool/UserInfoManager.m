@@ -33,7 +33,7 @@ static UserInfoManager *_userInfoManager = nil;
 -(UserInfoModel*)getUserInfo
 {
     
-    UserInfoModel *model = [fileCacheManager getObjectWithFileName:NSStringFromClass([UserInfoModel class])];
+    id model = [fileCacheManager getObjectWithFileName:NSStringFromClass([UserInfoModel class])];
     
     if (model != nil) {
         

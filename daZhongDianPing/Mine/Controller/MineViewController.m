@@ -12,6 +12,7 @@
 #import "UserInfoManager.h"
 #import "DZLoginViewController.h"
 #import "MineTypeButtonCell.h"
+#import "DZUserInfoViewController.h"
 
 #define USERINFOCELL @"UserInfoCell"
 #define NORMALCELL @"normalCell"
@@ -49,7 +50,15 @@
 }
 -(void)viewWillAppear:(BOOL)animated
 {
-     [self.navigationController setNavigationBarHidden:YES];
+     [super viewWillAppear:animated];
+    
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+}
+- (void)viewWillDisappear:(BOOL)animated {
+    
+    [super viewWillDisappear:animated];
+    
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 -(void)initObject{
     
@@ -57,13 +66,15 @@
      section4 = @[@"待点评",@"最近浏览",@"联系客服",@"设置"];
      section5 = @[@"我是商家"];
     
-     dataArray = @[@{@"icon": @"mc_wecard", @"text":@"我的点评", @"color": kWhiteColor},
-                   @{@"icon": @"mc_wecard", @"text": @"我的收藏", @"color": kWhiteColor},
-                   @{@"icon": @"mc_wecard", @"text": @"我的好友", @"color": kWhiteColor}];
+     dataArray = @[@{@"icon": @"CategoryIconID4", @"text":@"我的点评", @"color": kWhiteColor,@"tag":@"101"},
+                   @{@"icon": @"CategoryIconID5", @"text": @"我的收藏", @"color": kWhiteColor,@"tag":@"102"},
+                   @{@"icon": @"CategoryIconID6", @"text": @"我的好友", @"color": kWhiteColor,@"tag":@"103"}];
     
-    dataArray2 = @[@{@"icon": @"mc_wecard", @"text":@"待付款", @"color": kBlackColor},
-                  @{@"icon": @"mc_wecard", @"text": @"可使用", @"color": kBlackColor},
-                  @{@"icon": @"mc_wecard", @"text": @"退款/售后", @"color": kBlackColor}];
+    dataArray2 = @[@{@"icon": @"CategoryIconID1", @"text":@"待付款", @"color": kBlackColor,@"tag":@"104"},
+                  @{@"icon": @"CategoryIconID2", @"text": @"可使用", @"color": kBlackColor,@"tag":@"105"},
+                  @{@"icon": @"CategoryIconID3", @"text": @"退款/售后", @"color": kBlackColor,@"tag":@"106"}];
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(reloadTableView) name:@"reloadTableView" object:nil];
     
 }
 -(void)createTableView
@@ -75,15 +86,19 @@
     [_tableView setShowsVerticalScrollIndicator:NO];
     [_tableView registerClass:[UserInfoCell class] forCellReuseIdentifier:USERINFOCELL];
     [_tableView registerClass:[normalCell class] forCellReuseIdentifier:NORMALCELL];
-//    [HomeTableView registerClass:[homeLikeListCell class] forCellReuseIdentifier:HOMELIKELISTCELL];
+    [_tableView registerClass:[MineTypeButtonCell class] forCellReuseIdentifier:TYPEBUTTONCELL];
     [self.view addSubview:_tableView];
     
     
     [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         
-        make.left.right.top.bottom.equalTo(self.view);
+        make.edges.equalTo(self.view);
     }];
     
+}
+-(void)reloadTableView
+{
+    [_tableView reloadData];
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -170,6 +185,12 @@
             MineTypeButtonCell *cell = [[MineTypeButtonCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:TYPEBUTTONCELL];
             cell.backgroundColor = RGB(149, 107, 39);
             cell.buttonArray = dataArray;
+            cell.typeBlock = ^(int tag){
+                
+                
+                NSLog(@"%d",tag);
+                
+            };
             theCell = cell;
             
         }else if (indexPath.row == 1) {
@@ -177,6 +198,7 @@
             normalCell *cell = [[normalCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:NORMALCELL];
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             cell.title = @"我的订单";
+            
             theCell = cell;
             
         }else{
@@ -185,6 +207,12 @@
             MineTypeButtonCell *cell = [[MineTypeButtonCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:TYPEBUTTONCELL];
             cell.backgroundColor = kWhiteColor;
             cell.buttonArray = dataArray2;
+            cell.typeBlock = ^(int tag){
+                
+               
+                NSLog(@"%d",tag);
+                
+            };
             theCell = cell;
 
         }
@@ -232,32 +260,39 @@
     
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     
-    if (indexPath.section == 0) {
+    if ([UserInfoManager shardManager].isLogin) {
         
-        if ([UserInfoManager shardManager].isLogin) {
+        if (indexPath.section == 0) {
             
-            
-        }else{
-            
-            
-            DZLoginViewController *loginViewcontrol = [[DZLoginViewController alloc]init];
-            
-            UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:loginViewcontrol];
-           
-            dispatch_async(dispatch_get_main_queue(), ^{
-                
-              
-                [self presentViewController:nav animated:YES completion:nil];
-                
-
-            });
-            
+            DZUserInfoViewController *userinfo = [[DZUserInfoViewController alloc]init];;
+            [userinfo setHidesBottomBarWhenPushed:YES];
+            [self.navigationController pushViewController:userinfo animated:YES];
             
         }
+        
+        
+    }else{
+        
+        DZLoginViewController *loginViewcontrol = [[DZLoginViewController alloc]init];
+        
+        UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:loginViewcontrol];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            
+            [self presentViewController:nav animated:YES completion:nil];
+            
+            
+        });
+
     }
     
 }
-
+-(void)dealloc
+{
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 
 @end
 

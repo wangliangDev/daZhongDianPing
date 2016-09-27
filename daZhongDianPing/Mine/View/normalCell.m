@@ -42,13 +42,13 @@
         [self.contentView addSubview:lineLabel];
         _lineLabel = lineLabel;
         
-        _lineLabel.backgroundColor = RGB(246, 246, 246);
+        _lineLabel.backgroundColor = RGB(236, 236, 236);
         
         [_lineLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             
-            make.left.right.bottom.equalTo(self);
+            make.right.bottom.equalTo(self);
             make.height.equalTo(@1);
-            
+            make.left.equalTo(self).offset(0);
         }];
         
     }
@@ -77,7 +77,7 @@
             make.left.equalTo(self).offset(20);
             make.top.equalTo(self).offset(10);
             make.bottom.equalTo(self).offset(-10);
-            make.width.equalTo(@70);
+            make.width.equalTo(@100);
             
         }];
     }

@@ -7,7 +7,7 @@
 //
 
 #import "DZLoginViewController.h"
-#import "UserInfoManager.h"
+
 
 @interface DZLoginViewController (){
     
@@ -33,11 +33,13 @@
 
 -(void)initObject{
     
-    [self.userDict setObject:@"wangliang" forKey:@"userName"];
-    [self.userDict setObject:@"http://p1.bqimg.com/570557/bffd950429b9ebc5.jpg" forKey:@"userIconUrl"];
+    [self.userDict setObject:@"TTBB" forKey:@"userName"];
+    [self.userDict setObject:@"http://p1.bpimg.com/570557/89381afff6eca0e3.png" forKey:@"userIconUrl"];
    
-    
     [[UserInfoManager shardManager]loginedSaveUserInfo:self.userDict];
+    
+    
+    
     
 }
 -(void)createBarButtonItem
@@ -56,7 +58,12 @@
 }
 
 
+-(void)viewWillDisappear:(BOOL)animated
+{
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"reloadTableView" object:nil];
 
+}
 -(void)dismiss
 {
     

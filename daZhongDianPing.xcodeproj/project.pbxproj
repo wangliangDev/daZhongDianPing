@@ -17,7 +17,7 @@
 		9B500A111D52EB6E006E6A6D /* daZhongDianPingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B500A101D52EB6E006E6A6D /* daZhongDianPingTests.m */; };
 		9B500A1C1D52EB6E006E6A6D /* daZhongDianPingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B500A1B1D52EB6E006E6A6D /* daZhongDianPingUITests.m */; };
 		9B500A321D531817006E6A6D /* NetWorkRequestSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B500A311D531817006E6A6D /* NetWorkRequestSingleton.m */; };
-		9B500A361D531F37006E6A6D /* ShopBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B500A351D531F37006E6A6D /* ShopBaseNavigationController.m */; };
+		9B500A361D531F37006E6A6D /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B500A351D531F37006E6A6D /* BaseNavigationController.m */; };
 		9B500A3C1D5325CF006E6A6D /* TTBBTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B500A3B1D5325CF006E6A6D /* TTBBTabbarController.m */; };
 		F53353601D95090E00F42801 /* UserInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F533535F1D95090E00F42801 /* UserInfoManager.m */; };
 		F53353631D9509F500F42801 /* UserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F53353621D9509F500F42801 /* UserInfoModel.m */; };
@@ -34,6 +34,8 @@
 		F56E87AE1D93DEB000F363C7 /* UserInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F56E87AD1D93DEB000F363C7 /* UserInfoCell.m */; };
 		F56E87B11D93E5AD00F363C7 /* normalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F56E87B01D93E5AD00F363C7 /* normalCell.m */; };
 		F57BAC211D98C5F4002A145E /* MineTypeButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F57BAC201D98C5F4002A145E /* MineTypeButtonCell.m */; };
+		F57BAC241D991C86002A145E /* DZUserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F57BAC231D991C86002A145E /* DZUserInfoViewController.m */; };
+		F57BAC2B1D993AA5002A145E /* Constant.m in Sources */ = {isa = PBXBuildFile; fileRef = F57BAC2A1D993AA5002A145E /* Constant.m */; };
 		F59416F31D891FFA0004CD28 /* newDiscountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F59416F21D891FFA0004CD28 /* newDiscountCell.m */; };
 		F59DC4DD1D8E44FE0070F504 /* homeLikeListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F59DC4DC1D8E44FE0070F504 /* homeLikeListCell.m */; };
 		F59DC4E01D8E74D60070F504 /* homeLikeListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F59DC4DF1D8E74D60070F504 /* homeLikeListModel.m */; };
@@ -77,11 +79,10 @@
 		9B500A1B1D52EB6E006E6A6D /* daZhongDianPingUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = daZhongDianPingUITests.m; sourceTree = "<group>"; };
 		9B500A1D1D52EB6E006E6A6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B500A2A1D5310F4006E6A6D /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		9B500A2E1D531413006E6A6D /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
 		9B500A301D531817006E6A6D /* NetWorkRequestSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkRequestSingleton.h; sourceTree = "<group>"; };
 		9B500A311D531817006E6A6D /* NetWorkRequestSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkRequestSingleton.m; sourceTree = "<group>"; };
-		9B500A341D531F37006E6A6D /* ShopBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopBaseNavigationController.h; sourceTree = "<group>"; };
-		9B500A351D531F37006E6A6D /* ShopBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopBaseNavigationController.m; sourceTree = "<group>"; };
+		9B500A341D531F37006E6A6D /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
+		9B500A351D531F37006E6A6D /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
 		9B500A3A1D5325CF006E6A6D /* TTBBTabbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTBBTabbarController.h; sourceTree = "<group>"; };
 		9B500A3B1D5325CF006E6A6D /* TTBBTabbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTBBTabbarController.m; sourceTree = "<group>"; };
 		DC9F9EBE81FCDBEF0F6D8CD8 /* Pods-daZhongDianPing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-daZhongDianPing.debug.xcconfig"; path = "Pods/Target Support Files/Pods-daZhongDianPing/Pods-daZhongDianPing.debug.xcconfig"; sourceTree = "<group>"; };
@@ -115,6 +116,11 @@
 		F56E87B01D93E5AD00F363C7 /* normalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = normalCell.m; sourceTree = "<group>"; };
 		F57BAC1F1D98C5F4002A145E /* MineTypeButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineTypeButtonCell.h; sourceTree = "<group>"; };
 		F57BAC201D98C5F4002A145E /* MineTypeButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineTypeButtonCell.m; sourceTree = "<group>"; };
+		F57BAC221D991C86002A145E /* DZUserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZUserInfoViewController.h; sourceTree = "<group>"; };
+		F57BAC231D991C86002A145E /* DZUserInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZUserInfoViewController.m; sourceTree = "<group>"; };
+		F57BAC281D993A0D002A145E /* macro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = macro.h; sourceTree = "<group>"; };
+		F57BAC291D993AA5002A145E /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
+		F57BAC2A1D993AA5002A145E /* Constant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constant.m; sourceTree = "<group>"; };
 		F59416F11D891FFA0004CD28 /* newDiscountCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = newDiscountCell.h; sourceTree = "<group>"; };
 		F59416F21D891FFA0004CD28 /* newDiscountCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = newDiscountCell.m; sourceTree = "<group>"; };
 		F59DC4DB1D8E44FE0070F504 /* homeLikeListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = homeLikeListCell.h; sourceTree = "<group>"; };
@@ -239,7 +245,9 @@
 				F56E879B1D93CA4200F363C7 /* tool */,
 				F51F55461D911AD300E86329 /*  CustomView */,
 				9B500A331D531EE4006E6A6D /* BaseViewController */,
-				9B500A2E1D531413006E6A6D /* Constant.h */,
+				F57BAC281D993A0D002A145E /* macro.h */,
+				F57BAC291D993AA5002A145E /* Constant.h */,
+				F57BAC2A1D993AA5002A145E /* Constant.m */,
 			);
 			path = other;
 			sourceTree = "<group>";
@@ -256,8 +264,8 @@
 		9B500A331D531EE4006E6A6D /* BaseViewController */ = {
 			isa = PBXGroup;
 			children = (
-				9B500A341D531F37006E6A6D /* ShopBaseNavigationController.h */,
-				9B500A351D531F37006E6A6D /* ShopBaseNavigationController.m */,
+				9B500A341D531F37006E6A6D /* BaseNavigationController.h */,
+				9B500A351D531F37006E6A6D /* BaseNavigationController.m */,
 			);
 			path = BaseViewController;
 			sourceTree = "<group>";
@@ -406,6 +414,8 @@
 				F55362491D543F15000FFD7E /* MineViewController.m */,
 				F53353671D951B1200F42801 /* DZLoginViewController.h */,
 				F53353681D951B1200F42801 /* DZLoginViewController.m */,
+				F57BAC221D991C86002A145E /* DZUserInfoViewController.h */,
+				F57BAC231D991C86002A145E /* DZUserInfoViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -651,6 +661,8 @@
 				F5BDD2A61D890289005B42DB /* webViewController.m in Sources */,
 				F53353661D950F2800F42801 /* fileCacheManager.m in Sources */,
 				F56E87A21D93CD2000F363C7 /* popTableview.m in Sources */,
+				F57BAC241D991C86002A145E /* DZUserInfoViewController.m in Sources */,
+				F57BAC2B1D993AA5002A145E /* Constant.m in Sources */,
 				F59DC4E01D8E74D60070F504 /* homeLikeListModel.m in Sources */,
 				F56E87B11D93E5AD00F363C7 /* normalCell.m in Sources */,
 				F553624F1D546435000FFD7E /* HomeHeaderTypeCell.m in Sources */,
@@ -659,7 +671,7 @@
 				F5691C591D87AC60000E19A4 /* TTBBScrollViewButton.m in Sources */,
 				F55362401D543ED1000FFD7E /* DiscoverViewController.m in Sources */,
 				9B5009F81D52EB6E006E6A6D /* main.m in Sources */,
-				9B500A361D531F37006E6A6D /* ShopBaseNavigationController.m in Sources */,
+				9B500A361D531F37006E6A6D /* BaseNavigationController.m in Sources */,
 				F55362461D543EF7000FFD7E /* DiscountViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

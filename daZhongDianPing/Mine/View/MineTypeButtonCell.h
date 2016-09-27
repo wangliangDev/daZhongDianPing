@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^typeBlock)(int buttonTag);
+
 @interface MineTypeButtonCell : UITableViewCell{
     
     
@@ -18,8 +20,7 @@
 @property(nonatomic,strong)UIButton *leftButton;
 @property(nonatomic,strong)UIButton *middleButton;
 @property(nonatomic,strong)UIButton *rightButton;
-
 @property(nonatomic,strong)NSArray *buttonArray;
-//@property(nonatomic,strong)UIImageView *iconImage;
-//@property(nonatomic,strong)UILabel *titlel;
+@property(nonatomic,strong)typeBlock typeBlock;
+
 @end
