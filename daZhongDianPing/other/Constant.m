@@ -10,4 +10,9 @@
 
 @implementation Constant
 
+
+NSString *const loginFlag = @"loginFlag";
+NSString *const cityNameKey = @"cityNameKey";
+
+
 @end

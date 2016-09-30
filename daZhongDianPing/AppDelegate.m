@@ -56,9 +56,9 @@
     
     [tabbar creatButtonWithNormalName:@"dianping_24x24" andSelectName:@"dianping_pressed_24x24" andTitle:@"首页" andIndex:0 ];
     
-    [tabbar creatButtonWithNormalName:@"found_24x24" andSelectName:@"found_pressed_24x24" andTitle:@"团购" andIndex:1 ];
+    [tabbar creatButtonWithNormalName:@"group_24x24" andSelectName:@"group_pressed_24x24" andTitle:@"品质优惠" andIndex:1 ];
     
-    [tabbar creatButtonWithNormalName:@"group_24x24" andSelectName:@"group_pressed_24x24" andTitle:@"发现" andIndex:2 ];
+    [tabbar creatButtonWithNormalName:@"found_24x24" andSelectName:@"found_pressed_24x24" andTitle:@"发现" andIndex:2 ];
     
     [tabbar creatButtonWithNormalName:@"my_24x24" andSelectName:@"my_pressed_24x24" andTitle:@"我的" andIndex:3  ];
     tabbar.itemArray = array;

@@ -23,11 +23,18 @@
 		F53353631D9509F500F42801 /* UserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F53353621D9509F500F42801 /* UserInfoModel.m */; };
 		F53353661D950F2800F42801 /* fileCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F53353651D950F2800F42801 /* fileCacheManager.m */; };
 		F53353691D951B1200F42801 /* DZLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F53353681D951B1200F42801 /* DZLoginViewController.m */; };
+		F54501B41D9CE9B800D7903D /* TTBBCitySearchResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = F54501B31D9CE9B800D7903D /* TTBBCitySearchResultController.m */; };
 		F553623A1D543E96000FFD7E /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F55362371D543E96000FFD7E /* HomeViewController.m */; };
 		F55362401D543ED1000FFD7E /* DiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F553623D1D543ED1000FFD7E /* DiscoverViewController.m */; };
 		F55362461D543EF7000FFD7E /* DiscountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F55362431D543EF7000FFD7E /* DiscountViewController.m */; };
 		F553624C1D543F15000FFD7E /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F55362491D543F15000FFD7E /* MineViewController.m */; };
 		F553624F1D546435000FFD7E /* HomeHeaderTypeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F553624E1D546435000FFD7E /* HomeHeaderTypeCell.m */; };
+		F55BF8DF1D9E41BD008718DD /* DiscountTypeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F55BF8DE1D9E41BD008718DD /* DiscountTypeCell.m */; };
+		F55BF8E21D9E4E58008718DD /* DiscountAllTypeController.m in Sources */ = {isa = PBXBuildFile; fileRef = F55BF8E11D9E4E58008718DD /* DiscountAllTypeController.m */; };
+		F55BF8E51D9E5C58008718DD /* DiscountAllTypeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F55BF8E41D9E5C58008718DD /* DiscountAllTypeCell.m */; };
+		F55DEBE91D9A23FE00C93A27 /* TTBBCitySelectController.m in Sources */ = {isa = PBXBuildFile; fileRef = F55DEBE81D9A23FE00C93A27 /* TTBBCitySelectController.m */; };
+		F55DEBEC1D9A520900C93A27 /* SelectCityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F55DEBEB1D9A520900C93A27 /* SelectCityCell.m */; };
+		F55DEBEE1D9A57CB00C93A27 /* citydict.plist in Resources */ = {isa = PBXBuildFile; fileRef = F55DEBED1D9A57CB00C93A27 /* citydict.plist */; };
 		F5691C591D87AC60000E19A4 /* TTBBScrollViewButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F5691C581D87AC60000E19A4 /* TTBBScrollViewButton.m */; };
 		F56E879F1D93CA9C00F363C7 /* DXPopover.m in Sources */ = {isa = PBXBuildFile; fileRef = F56E879E1D93CA9C00F363C7 /* DXPopover.m */; };
 		F56E87A21D93CD2000F363C7 /* popTableview.m in Sources */ = {isa = PBXBuildFile; fileRef = F56E87A11D93CD2000F363C7 /* popTableview.m */; };
@@ -94,6 +101,8 @@
 		F53353651D950F2800F42801 /* fileCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = fileCacheManager.m; sourceTree = "<group>"; };
 		F53353671D951B1200F42801 /* DZLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZLoginViewController.h; sourceTree = "<group>"; };
 		F53353681D951B1200F42801 /* DZLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZLoginViewController.m; sourceTree = "<group>"; };
+		F54501B21D9CE9B800D7903D /* TTBBCitySearchResultController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTBBCitySearchResultController.h; sourceTree = "<group>"; };
+		F54501B31D9CE9B800D7903D /* TTBBCitySearchResultController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTBBCitySearchResultController.m; sourceTree = "<group>"; };
 		F55362361D543E96000FFD7E /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		F55362371D543E96000FFD7E /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		F553623C1D543ED1000FFD7E /* DiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverViewController.h; sourceTree = "<group>"; };
@@ -104,6 +113,17 @@
 		F55362491D543F15000FFD7E /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
 		F553624D1D546435000FFD7E /* HomeHeaderTypeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeHeaderTypeCell.h; sourceTree = "<group>"; };
 		F553624E1D546435000FFD7E /* HomeHeaderTypeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeHeaderTypeCell.m; sourceTree = "<group>"; };
+		F55BF8DD1D9E41BD008718DD /* DiscountTypeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DiscountTypeCell.h; path = daZhongDianPing/Home/Controller/DiscountTypeCell.h; sourceTree = SOURCE_ROOT; };
+		F55BF8DE1D9E41BD008718DD /* DiscountTypeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DiscountTypeCell.m; path = daZhongDianPing/Home/Controller/DiscountTypeCell.m; sourceTree = SOURCE_ROOT; };
+		F55BF8E01D9E4E58008718DD /* DiscountAllTypeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscountAllTypeController.h; sourceTree = "<group>"; };
+		F55BF8E11D9E4E58008718DD /* DiscountAllTypeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscountAllTypeController.m; sourceTree = "<group>"; };
+		F55BF8E31D9E5C58008718DD /* DiscountAllTypeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DiscountAllTypeCell.h; path = daZhongDianPing/Discount/Controller/DiscountAllTypeCell.h; sourceTree = SOURCE_ROOT; };
+		F55BF8E41D9E5C58008718DD /* DiscountAllTypeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DiscountAllTypeCell.m; path = daZhongDianPing/Discount/Controller/DiscountAllTypeCell.m; sourceTree = SOURCE_ROOT; };
+		F55DEBE71D9A23FE00C93A27 /* TTBBCitySelectController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTBBCitySelectController.h; sourceTree = "<group>"; };
+		F55DEBE81D9A23FE00C93A27 /* TTBBCitySelectController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTBBCitySelectController.m; sourceTree = "<group>"; };
+		F55DEBEA1D9A520900C93A27 /* SelectCityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectCityCell.h; sourceTree = "<group>"; };
+		F55DEBEB1D9A520900C93A27 /* SelectCityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectCityCell.m; sourceTree = "<group>"; };
+		F55DEBED1D9A57CB00C93A27 /* citydict.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = citydict.plist; sourceTree = "<group>"; };
 		F5691C571D87AC60000E19A4 /* TTBBScrollViewButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTBBScrollViewButton.h; sourceTree = "<group>"; };
 		F5691C581D87AC60000E19A4 /* TTBBScrollViewButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTBBScrollViewButton.m; sourceTree = "<group>"; };
 		F56E879D1D93CA9C00F363C7 /* DXPopover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXPopover.h; sourceTree = "<group>"; };
@@ -213,6 +233,7 @@
 				9B500A021D52EB6E006E6A6D /* Assets.xcassets */,
 				9B500A041D52EB6E006E6A6D /* LaunchScreen.storyboard */,
 				9B500A071D52EB6E006E6A6D /* Info.plist */,
+				F55DEBED1D9A57CB00C93A27 /* citydict.plist */,
 				9B5009F71D52EB6E006E6A6D /* main.m */,
 				9B500A2A1D5310F4006E6A6D /* PrefixHeader.pch */,
 				9B500A3A1D5325CF006E6A6D /* TTBBTabbarController.h */,
@@ -333,6 +354,10 @@
 				F55362371D543E96000FFD7E /* HomeViewController.m */,
 				F5BDD2A41D890289005B42DB /* webViewController.h */,
 				F5BDD2A51D890289005B42DB /* webViewController.m */,
+				F55DEBE71D9A23FE00C93A27 /* TTBBCitySelectController.h */,
+				F55DEBE81D9A23FE00C93A27 /* TTBBCitySelectController.m */,
+				F54501B21D9CE9B800D7903D /* TTBBCitySearchResultController.h */,
+				F54501B31D9CE9B800D7903D /* TTBBCitySearchResultController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -351,6 +376,8 @@
 			children = (
 				F5691C571D87AC60000E19A4 /* TTBBScrollViewButton.h */,
 				F5691C581D87AC60000E19A4 /* TTBBScrollViewButton.m */,
+				F55DEBEA1D9A520900C93A27 /* SelectCityCell.h */,
+				F55DEBEB1D9A520900C93A27 /* SelectCityCell.m */,
 				F553624D1D546435000FFD7E /* HomeHeaderTypeCell.h */,
 				F553624E1D546435000FFD7E /* HomeHeaderTypeCell.m */,
 				F59416F11D891FFA0004CD28 /* newDiscountCell.h */,
@@ -389,6 +416,8 @@
 			children = (
 				F55362421D543EF7000FFD7E /* DiscountViewController.h */,
 				F55362431D543EF7000FFD7E /* DiscountViewController.m */,
+				F55BF8E01D9E4E58008718DD /* DiscountAllTypeController.h */,
+				F55BF8E11D9E4E58008718DD /* DiscountAllTypeController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -403,6 +432,10 @@
 		F55362451D543EF7000FFD7E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F55BF8DD1D9E41BD008718DD /* DiscountTypeCell.h */,
+				F55BF8DE1D9E41BD008718DD /* DiscountTypeCell.m */,
+				F55BF8E31D9E5C58008718DD /* DiscountAllTypeCell.h */,
+				F55BF8E41D9E5C58008718DD /* DiscountAllTypeCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -572,6 +605,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B500A061D52EB6E006E6A6D /* LaunchScreen.storyboard in Resources */,
+				F55DEBEE1D9A57CB00C93A27 /* citydict.plist in Resources */,
 				9B500A031D52EB6E006E6A6D /* Assets.xcassets in Resources */,
 				9B500A011D52EB6E006E6A6D /* Main.storyboard in Resources */,
 			);
@@ -652,6 +686,7 @@
 				9B500A3C1D5325CF006E6A6D /* TTBBTabbarController.m in Sources */,
 				F553623A1D543E96000FFD7E /* HomeViewController.m in Sources */,
 				F53353601D95090E00F42801 /* UserInfoManager.m in Sources */,
+				F55DEBE91D9A23FE00C93A27 /* TTBBCitySelectController.m in Sources */,
 				F59416F31D891FFA0004CD28 /* newDiscountCell.m in Sources */,
 				F53353631D9509F500F42801 /* UserInfoModel.m in Sources */,
 				F56E87AE1D93DEB000F363C7 /* UserInfoCell.m in Sources */,
@@ -660,18 +695,23 @@
 				F553624C1D543F15000FFD7E /* MineViewController.m in Sources */,
 				F5BDD2A61D890289005B42DB /* webViewController.m in Sources */,
 				F53353661D950F2800F42801 /* fileCacheManager.m in Sources */,
+				F55DEBEC1D9A520900C93A27 /* SelectCityCell.m in Sources */,
 				F56E87A21D93CD2000F363C7 /* popTableview.m in Sources */,
 				F57BAC241D991C86002A145E /* DZUserInfoViewController.m in Sources */,
 				F57BAC2B1D993AA5002A145E /* Constant.m in Sources */,
 				F59DC4E01D8E74D60070F504 /* homeLikeListModel.m in Sources */,
+				F55BF8E51D9E5C58008718DD /* DiscountAllTypeCell.m in Sources */,
 				F56E87B11D93E5AD00F363C7 /* normalCell.m in Sources */,
 				F553624F1D546435000FFD7E /* HomeHeaderTypeCell.m in Sources */,
 				F56E879F1D93CA9C00F363C7 /* DXPopover.m in Sources */,
 				F57BAC211D98C5F4002A145E /* MineTypeButtonCell.m in Sources */,
+				F54501B41D9CE9B800D7903D /* TTBBCitySearchResultController.m in Sources */,
+				F55BF8DF1D9E41BD008718DD /* DiscountTypeCell.m in Sources */,
 				F5691C591D87AC60000E19A4 /* TTBBScrollViewButton.m in Sources */,
 				F55362401D543ED1000FFD7E /* DiscoverViewController.m in Sources */,
 				9B5009F81D52EB6E006E6A6D /* main.m in Sources */,
 				9B500A361D531F37006E6A6D /* BaseNavigationController.m in Sources */,
+				F55BF8E21D9E4E58008718DD /* DiscountAllTypeController.m in Sources */,
 				F55362461D543EF7000FFD7E /* DiscountViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

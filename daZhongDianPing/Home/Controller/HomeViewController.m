@@ -15,6 +15,7 @@
 #import "homeLikeListCell.h"
 #import "DXPopover.h"
 #import "popTableview.h"
+#import "TTBBCitySelectController.h"
 
 #define HEADERTYPECELL @"HomeHeaderTypeCell"
 #define NEWDISCOUNTCELL @"NewDicountCell"
@@ -32,7 +33,8 @@
     UIButton *funButton;
   
 }
-@property (nonatomic, strong) DXPopover *popover;
+@property(nonatomic, strong) DXPopover *popover;
+@property(nonatomic,strong)UIButton *cityButton;
 @end
 
 
@@ -45,7 +47,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     [self.navigationController.navigationBar setBarTintColor:kOrangeColor];
     [self initObject];
-    [self createLeftButton];
+    [self createBarItemButton];
     [self createTableView];
 }
 
@@ -107,12 +109,36 @@
     }];
     
 }
+-(UIButton*)cityButton
+{
+    if (!_cityButton) {
+        
+        NSString *cityNmae = [fileCacheManager getObjectWithFileName:cityNameKey];
+       
+        
+        _cityButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _cityButton.frame = CGRectMake(0, 0, 60, 30);
+        _cityButton.titleLabel.font = kFont(13);
+       
+        [_cityButton setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
+        [_cityButton addTarget:self action:@selector(selectCity) forControlEvents:UIControlEventTouchUpInside];
+        
+        if (cityNmae.length > 0) {
+            
+            [_cityButton setTitle:cityNmae forState:UIControlStateNormal];
+            
+        }else{
+            
+             [_cityButton setTitle:@"选择城市" forState:UIControlStateNormal];
+        }
+    }
+    
+    return _cityButton;
+}
 
-
--(void)createLeftButton
+-(void)createBarItemButton
 {
    
-    
     funButton = [UIButton buttonWithType:UIButtonTypeCustom];
     funButton.frame = CGRectMake(0, 0, 25, 25);
     [funButton setBackgroundImage:[UIImage imageNamed:@"home_add"] forState:UIControlStateNormal];
@@ -120,6 +146,8 @@
     UIBarButtonItem *buttonItem = [[UIBarButtonItem alloc]initWithCustomView:funButton];
     self.navigationItem.rightBarButtonItem = buttonItem;
     
+    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc]initWithCustomView:self.cityButton];
+    self.navigationItem.leftBarButtonItem = leftItem;
   
 }
 
@@ -274,7 +302,22 @@
 
 }
 
-
+-(void)selectCity
+{
+    
+    TTBBCitySelectController *cityselect = [TTBBCitySelectController new];
+    cityselect.setCityButtonBlock = ^(NSString *city){
+        
+        [fileCacheManager saveObject:city fileName:cityNameKey];
+        
+         [_cityButton setTitle:city forState:UIControlStateNormal];
+    };
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:cityselect];
+    
+    [self presentViewController:nav animated:YES completion:^{
+        
+    }];
+}
 @end
 
 

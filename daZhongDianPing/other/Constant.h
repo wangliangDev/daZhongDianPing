@@ -8,14 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Constant : NSObject{
-    
-  
-}
-    
+@interface Constant : NSObject
 
 
-
+extern NSString *const loginFlag;
+extern NSString *const cityNameKey;
 
 
 

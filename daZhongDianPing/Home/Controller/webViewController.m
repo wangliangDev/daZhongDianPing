@@ -9,7 +9,7 @@
 #import "webViewController.h"
 
 #import "NetWorkRequestSingleton.h"
-#define iOS7 [[[UIDevice currentDevice]systemVersion] floatValue] == 7.0
+
 
 @interface webViewController ()
 

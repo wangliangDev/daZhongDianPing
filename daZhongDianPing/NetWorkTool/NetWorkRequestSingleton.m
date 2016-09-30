@@ -54,7 +54,7 @@
     } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
         
          NSString *errorStr = [error.userInfo objectForKey:@"NSLocalizedDescription"];
-        FailBlock(error);
+        FailBlock(errorStr);
     }];
 }
 

@@ -55,7 +55,7 @@ static UserInfoManager *_userInfoManager = nil;
     
     [fileCacheManager saveObject:userModel fileName:NSStringFromClass([UserInfoModel class])];
     
-    [fileCacheManager saveUserDefaults:@YES forKey:LOGINFLAG];
+    [fileCacheManager saveUserDefaults:@YES forKey:loginFlag];
     
     
 }
@@ -66,14 +66,14 @@ static UserInfoManager *_userInfoManager = nil;
     
     [fileCacheManager removeObjectWithFileName:NSStringFromClass([UserInfoModel class])];
     
-     [fileCacheManager saveUserDefaults:@NO forKey:LOGINFLAG];
+     [fileCacheManager saveUserDefaults:@NO forKey:loginFlag];
 }
 
 
 -(BOOL)isLogin
 {
     
-   return  [[NSUserDefaults standardUserDefaults] boolForKey:LOGINFLAG];
+   return  [[NSUserDefaults standardUserDefaults] boolForKey:loginFlag];
 }
 @end
 
