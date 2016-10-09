@@ -1,21 +1,19 @@
 //
-//  DiscountAllTypeCell.m
+//  DiscountAllTypeHeadCell.m
 //  daZhongDianPing
 //
-//  Created by ttbb on 2016/9/30.
+//  Created by ttbb on 2016/10/8.
 //  Copyright © 2016年 ttbb. All rights reserved.
 //
 
-#import "DiscountAllTypeCell.h"
+#import "DiscountAllTypeHeadCell.h"
 
-@implementation DiscountAllTypeCell
+@implementation DiscountAllTypeHeadCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
 }
-
-
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     
@@ -25,28 +23,25 @@
         
         self.backgroundColor = RGB(245, 245, 245);
         
-       
+        
         
     }
     
     return self;
 }
 
-
 -(void)setButtonDict:(NSDictionary *)buttonDict
 {
     _buttonDict = buttonDict;
     
-    NSArray * buttonArray = [buttonDict objectForKey:@"buttonArray"];
-    
-    
-    
-    int buttonWidth = (KSCREEN_WIDTH - 10) / 4;
+    NSArray *buttonArray = [buttonDict objectForKey:@"content"];
+    int buttonWidth = (KSCREEN_WIDTH - 10) / buttonArray.count;
     
     UIView *bgView = [UIView new];
     bgView.backgroundColor = kWhiteColor;
     bgView.layer.borderWidth=1;
     bgView.layer.borderColor =RGB(235, 235, 235).CGColor;
+    bgView.frame = CGRectMake(5, 10, KSCREEN_WIDTH - 10, 100);
     [self.contentView addSubview:bgView];
     
     
@@ -54,6 +49,11 @@
     imageView.frame = CGRectMake(10, 10, 20, 20);
     imageView.image = [UIImage imageNamed:[buttonDict objectForKey:@"icon"]];
     [bgView addSubview:imageView];
+    
+    UILabel *line = [UILabel new];
+    line.backgroundColor = RGB(235, 235, 235);
+    line.frame = CGRectMake(0, 39, KSCREEN_WIDTH - 10, 1);
+    [bgView addSubview:line];
     
     
     UILabel *label = [UILabel new];
@@ -65,39 +65,39 @@
     [bgView addSubview:label];
     
     
-    if (buttonArray.count %4 == 0) {
-        
-        bgView.frame = CGRectMake(5, 5, KSCREEN_WIDTH - 10, buttonArray.count / 4 *35+40);
-        
-    }else{
-        
-         bgView.frame = CGRectMake(5, 5, KSCREEN_WIDTH - 10, (buttonArray.count / 4 +1) *35+40);
-    }
-    
-    
     for (int i = 0; i <[buttonArray count]; i++)
     {
-        
+        NSDictionary *dict = buttonArray[i];
         
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-        button.frame = CGRectMake(buttonWidth * (i%4), 40+35*(i/4), buttonWidth, 35);
+        button.frame = CGRectMake(buttonWidth * i, 40, buttonWidth, 50);
         [button addTarget:self action:@selector(typeAction:) forControlEvents:UIControlEventTouchUpInside];
         button.tag = i;
-        button.titleLabel.font = kFont(12);
-        [button setTitleColor: kBlackColor forState:UIControlStateNormal];
-        [button setTitle:buttonArray[i] forState:UIControlStateNormal];
         [bgView addSubview:button];
+       
+        UIImageView *iconImageView = [UIImageView new];
+        iconImageView.frame = CGRectMake(0, 0, 30, 30);
+        [iconImageView setCenter:CGPointMake(buttonWidth / 2, 20)];
+        iconImageView.image = [UIImage imageNamed:[dict objectForKey:@"icon"]];
+        [button addSubview:iconImageView];
         
-        button.layer.borderWidth = 1;
-        button.layer.borderColor = RGB(235, 235, 235).CGColor;
+        UILabel *titlelabel = [UILabel new];
+        titlelabel.frame = CGRectMake(0, 10, 60, 20);
+        titlelabel.font = kFont(10);
+        titlelabel.textAlignment = NSTextAlignmentCenter;
+        [titlelabel setCenter:CGPointMake(buttonWidth / 2, CGRectGetMaxY(iconImageView.frame) +12)];
+        titlelabel.textColor = kBlackColor;
+        titlelabel.text = [dict objectForKey:@"text"];
+        [button addSubview:titlelabel];
         
     }
-
+    
+    
+    
+    
 }
 
-
--(void)typeAction:(UIButton*)button
-{
+-(void)typeAction:(UIButton*)button{
     
     if ([_delegate respondsToSelector:@selector(typeClicked:)]) {
         
@@ -105,22 +105,10 @@
     }
 }
 
-
-
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 
-    
+    // Configure the view for the selected state
 }
 
 @end
-
-
-
-
-
-
-
-
-
-

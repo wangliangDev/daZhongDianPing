@@ -8,16 +8,19 @@
 
 #import "DiscountAllTypeController.h"
 #import "DiscountAllTypeCell.h"
+#import "DiscountAllTypeHeadCell.h"
+#import "DiscountAllTypeModel.h"
 
 #define DISALLTYPECELL @"DiscountAllTypeCell"
+#define DISALLTYPEHEADCELL @"DiscountAllTypeHeadCell"
 
-@interface DiscountAllTypeController ()<UITableViewDelegate,UITableViewDataSource>{
+@interface DiscountAllTypeController ()<UITableViewDelegate,UITableViewDataSource,DiscountAllTypeDelegate>{
     
-    NSArray *allDataArray;
+    NSDictionary *headDict;
     
 }
 @property(nonatomic,strong)UITableView *tableView;
-
+@property(nonatomic,strong)NSMutableArray *allDataArray;
 
 
 @end
@@ -27,7 +30,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
    
-    
+    self.view.backgroundColor = kWhiteColor;
     [self initObject];
     
     [self.view addSubview:self.tableView];
@@ -39,9 +42,33 @@
     
     NSArray *foodArray = @[@"全部",@"火锅",@"自助餐",@"烧烤",@"奥菜",@"面包甜点",@"日本料理",@"西餐",@"咖啡厅",@"海鲜",@"韩国料理",@"东南亚菜",@"湘菜",@"小吃快餐",@"素菜"];
     NSArray *movieArray = @[@"全部",@"热映影片",@"演出赛事",@"电影院"];
-    allDataArray = @[@{@"content" : foodArray ,@"title":@"美食"},
-                     @{@"content" : movieArray ,@"title":@"电影"}
-                     ];
+    
+  
+    
+    DiscountAllTypeModel *model = [DiscountAllTypeModel new];
+    model.contentArray = foodArray;
+    model.title = @"美食";
+    model.icon = @"3.png";
+    model.flag = NO;
+    
+    
+    DiscountAllTypeModel *model2 = [DiscountAllTypeModel new];
+    model2.contentArray = movieArray;
+    model2.title = @"电影";
+    model2.icon = @"4.png";
+    model2.flag = NO;
+    
+    [self.allDataArray addObject:model];
+    [self.allDataArray addObject:model2];
+    
+    
+    NSArray *dataArray = @[@{@"icon": @"3.png", @"text":@"自助餐"},
+                  @{@"icon": @"7.png", @"text": @"广东菜",},
+                  @{@"icon": @"2.png", @"text": @"江浙菜"},
+                  @{@"icon": @"9.png", @"text": @"机票"}
+                 ];
+    
+    headDict = @{@"content":dataArray,@"title":@"热门推荐",@"icon":@"16"};
     
     
 }
@@ -54,10 +81,23 @@
         _tableView.dataSource = self;
         _tableView.delegate = self;
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        _tableView.backgroundColor = RGB(245, 245, 245);
         [_tableView registerClass:[DiscountAllTypeCell class] forCellReuseIdentifier:DISALLTYPECELL];
+        [_tableView registerClass:[DiscountAllTypeHeadCell class] forCellReuseIdentifier:DISALLTYPEHEADCELL];
     }
     
     return _tableView;
+}
+
+
+-(NSMutableArray*)allDataArray
+{
+    if (!_allDataArray) {
+        
+        _allDataArray = [NSMutableArray new];
+    }
+    
+    return _allDataArray;
 }
 
 #pragma mark --UITableViewDelegate
@@ -70,40 +110,137 @@
     
     if (indexPath.section == 0) {
         
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-        
+      
+          DiscountAllTypeHeadCell *cell = [tableView dequeueReusableCellWithIdentifier:DISALLTYPEHEADCELL];
         if (cell == nil) {
             
-            cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-            theCell = cell;
+            cell = [[DiscountAllTypeHeadCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:DISALLTYPEHEADCELL];
+          
         }
-
+       
+        cell.buttonDict = headDict;
+        
+        theCell = cell;
         
     }else{
         
-        DiscountAllTypeCell *cell = [[DiscountAllTypeCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:DISALLTYPECELL];
+        DiscountAllTypeCell *cell = [tableView dequeueReusableCellWithIdentifier:DISALLTYPECELL];
         
-        NSDictionary *dict = [allDataArray objectAtIndex:indexPath.section-1];
-        NSArray * arr = [dict objectForKey:@"content"];
-        cell.buttonArray = arr;
+        if (cell == nil) {
+            
+            cell = [[DiscountAllTypeCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:DISALLTYPECELL];
+
+        }
+        
+        cell.delegate = self;
+        DiscountAllTypeModel *model =  [self.allDataArray objectAtIndex:indexPath.section-1];
+        
+        
+        if (model.contentArray.count > 11)
+        {
+            if (model.flag) {
+                
+                
+                NSDictionary *dict = @{@"buttonArray":model.contentArray,@"title":model.title ,@"icon":model.icon};
+                
+                cell.buttonDict = dict;
+                
+            }else{
+                
+                
+                NSArray *smallArray = [model.contentArray subarrayWithRange:NSMakeRange(0, 11)];
+                
+                NSMutableArray *tempArray = [[NSMutableArray alloc]initWithArray:smallArray];
+                [tempArray insertObject:@"更多" atIndex:smallArray.count ];
+                
+                NSDictionary *dict = @{@"buttonArray":tempArray ,@"title":model.title ,@"icon":model.icon};
+                
+                cell.buttonDict = dict;
+                
+                
+            }
+
+        }else{
+            
+            NSDictionary *dict = @{@"buttonArray":model.contentArray,@"title":model.title ,@"icon":model.icon};
+            
+            cell.buttonDict = dict;
+        }
+        
+      
         theCell = cell;
         
     }
-    
+    theCell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     return theCell;
 }
 
 
--(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
-{
-    return 20;
-}
+
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+   
     
-    return 150;
+    if (indexPath.section == 0) {
+        
+        
+        return 110;
+        
+        
+    }else{
+        
+         DiscountAllTypeModel *model = [self.allDataArray objectAtIndex:indexPath.section-1];
+        if (model.flag)
+        {
+            
+            if (model.contentArray.count % 4 == 0 ) {
+                
+                return (model.contentArray.count / 4) * 40+50 ;
+            }else{
+                
+                return (model.contentArray.count / 4 +1) * 40+50;
+            }
+            
+            
+        }else{
+            
+            
+            if (model.contentArray.count > 11) {
+                
+                NSArray *smallArray = [model.contentArray subarrayWithRange:NSMakeRange(0, 11)];
+                
+                if (smallArray.count % 4 == 0) {
+                    
+                    return (smallArray.count / 4) * 40+50 ;
+                    
+                }else{
+                    
+                    return (smallArray.count / 4 +1) * 40+50 ;
+                }
+            }else{
+                
+               
+    
+                if (model.contentArray.count % 4 == 0 ) {
+    
+                    return (model.contentArray.count / 4) * 40 +50;
+                    
+                }else{
+                    
+                    return (model.contentArray.count / 4 +1) * 40+50;
+                }
+            }
+            
+        }
+        
+    }
+    
+    
+ 
+   
 }
+
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -113,11 +250,34 @@
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     
-    return allDataArray.count+1;
+    return self.allDataArray.count+1;
     
   
 }
+-(void)typeClicked:(UIButton*)button
+{
 
+    
+    UITableViewCell *cell = (UITableViewCell *)[[[button superview] superview] superview];
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+    NSLog(@"indexPath is = %li",(long)indexPath.section);
+    NSLog(@"%d",(int)button.tag);
+    if (button.tag == 11)
+    {
+        
+        DiscountAllTypeModel *model =  [self.allDataArray objectAtIndex:indexPath.section-1];
+        if (model.flag == NO)
+        {
+            model.flag = YES;
+            [self.tableView reloadData];
+        }
+        
+       
+    }
+  
+   
+   
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
    

@@ -77,7 +77,7 @@
             cell = [[DiscountTypeCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:DISCOUNTTYPECELL];
         }
         
-      //  DiscountTypeCell *cell = [[DiscountTypeCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:DISCOUNTTYPECELL];
+    
         cell.typeActionBlock = ^(int buttonTag){
             
             if (buttonTag == 4)
@@ -86,8 +86,6 @@
                [alltype setHidesBottomBarWhenPushed:YES];
                 [self.navigationController pushViewController:alltype animated:YES];
             }
-            
-            
             
             
         };

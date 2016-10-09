@@ -8,11 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol DiscountAllTypeDelegate <NSObject>
+
+-(void)typeClicked:(UIButton*) button;
+
+@end
+
 @interface DiscountAllTypeCell : UITableViewCell{
     
     
 }
 @property(nonatomic,strong) NSDictionary * buttonDict;
-@property(nonatomic,strong) NSArray *buttonArray;
+
+
+
+@property(nonatomic,weak)id<DiscountAllTypeDelegate> delegate;
 
 @end
