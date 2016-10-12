@@ -13,7 +13,7 @@
 
 extern NSString *const loginFlag;
 extern NSString *const cityNameKey;
-
+extern NSString *const searchHostory;
 
 
 

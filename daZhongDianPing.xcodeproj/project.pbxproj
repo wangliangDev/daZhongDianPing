@@ -18,7 +18,6 @@
 		9B500A1C1D52EB6E006E6A6D /* daZhongDianPingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B500A1B1D52EB6E006E6A6D /* daZhongDianPingUITests.m */; };
 		9B500A321D531817006E6A6D /* NetWorkRequestSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B500A311D531817006E6A6D /* NetWorkRequestSingleton.m */; };
 		9B500A361D531F37006E6A6D /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B500A351D531F37006E6A6D /* BaseNavigationController.m */; };
-		9B500A3C1D5325CF006E6A6D /* TTBBTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B500A3B1D5325CF006E6A6D /* TTBBTabbarController.m */; };
 		F53353601D95090E00F42801 /* UserInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F533535F1D95090E00F42801 /* UserInfoManager.m */; };
 		F53353631D9509F500F42801 /* UserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F53353621D9509F500F42801 /* UserInfoModel.m */; };
 		F53353661D950F2800F42801 /* fileCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F53353651D950F2800F42801 /* fileCacheManager.m */; };
@@ -29,6 +28,7 @@
 		F55362461D543EF7000FFD7E /* DiscountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F55362431D543EF7000FFD7E /* DiscountViewController.m */; };
 		F553624C1D543F15000FFD7E /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F55362491D543F15000FFD7E /* MineViewController.m */; };
 		F553624F1D546435000FFD7E /* HomeHeaderTypeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F553624E1D546435000FFD7E /* HomeHeaderTypeCell.m */; };
+		F554FF681DADEB6700597262 /* DiscountFoodCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F554FF671DADEB6700597262 /* DiscountFoodCell.m */; };
 		F55BF8DF1D9E41BD008718DD /* DiscountTypeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F55BF8DE1D9E41BD008718DD /* DiscountTypeCell.m */; };
 		F55BF8E21D9E4E58008718DD /* DiscountAllTypeController.m in Sources */ = {isa = PBXBuildFile; fileRef = F55BF8E11D9E4E58008718DD /* DiscountAllTypeController.m */; };
 		F55BF8E51D9E5C58008718DD /* DiscountAllTypeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F55BF8E41D9E5C58008718DD /* DiscountAllTypeCell.m */; };
@@ -45,10 +45,16 @@
 		F57BAC2B1D993AA5002A145E /* Constant.m in Sources */ = {isa = PBXBuildFile; fileRef = F57BAC2A1D993AA5002A145E /* Constant.m */; };
 		F5814F4A1DA88A0B0058E32D /* DiscountAllTypeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F5814F491DA88A0B0058E32D /* DiscountAllTypeModel.m */; };
 		F5814F4D1DA8CB970058E32D /* DiscountAllTypeHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F5814F4C1DA8CB970058E32D /* DiscountAllTypeHeadCell.m */; };
+		F58362BC1DAB7DA800EB45A2 /* TTBBTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F58362BB1DAB7DA800EB45A2 /* TTBBTabbarController.m */; };
+		F58362BF1DAB7DB300EB45A2 /* SXHeadLine.m in Sources */ = {isa = PBXBuildFile; fileRef = F58362BE1DAB7DB300EB45A2 /* SXHeadLine.m */; };
+		F588A5C31DAC8B1B0036EF9A /* FoodSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F588A5C21DAC8B1B0036EF9A /* FoodSearchViewController.m */; };
+		F588A5C91DACDEF30036EF9A /* FoodSearchHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F588A5C81DACDEF30036EF9A /* FoodSearchHeadCell.m */; };
+		F588A5CC1DACF9C50036EF9A /* FoodSearchHostoryListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F588A5CB1DACF9C50036EF9A /* FoodSearchHostoryListCell.m */; };
 		F59416F31D891FFA0004CD28 /* newDiscountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F59416F21D891FFA0004CD28 /* newDiscountCell.m */; };
 		F59DC4DD1D8E44FE0070F504 /* homeLikeListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F59DC4DC1D8E44FE0070F504 /* homeLikeListCell.m */; };
 		F59DC4E01D8E74D60070F504 /* homeLikeListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F59DC4DF1D8E74D60070F504 /* homeLikeListModel.m */; };
 		F5BDD2A61D890289005B42DB /* webViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5BDD2A51D890289005B42DB /* webViewController.m */; };
+		F5FDE84D1DAE137A005E8937 /* DiscountFoodModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F5FDE84C1DAE137A005E8937 /* DiscountFoodModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,8 +98,6 @@
 		9B500A311D531817006E6A6D /* NetWorkRequestSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkRequestSingleton.m; sourceTree = "<group>"; };
 		9B500A341D531F37006E6A6D /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
 		9B500A351D531F37006E6A6D /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
-		9B500A3A1D5325CF006E6A6D /* TTBBTabbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTBBTabbarController.h; sourceTree = "<group>"; };
-		9B500A3B1D5325CF006E6A6D /* TTBBTabbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTBBTabbarController.m; sourceTree = "<group>"; };
 		DC9F9EBE81FCDBEF0F6D8CD8 /* Pods-daZhongDianPing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-daZhongDianPing.debug.xcconfig"; path = "Pods/Target Support Files/Pods-daZhongDianPing/Pods-daZhongDianPing.debug.xcconfig"; sourceTree = "<group>"; };
 		F533535E1D95090E00F42801 /* UserInfoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoManager.h; sourceTree = "<group>"; };
 		F533535F1D95090E00F42801 /* UserInfoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoManager.m; sourceTree = "<group>"; };
@@ -115,6 +119,8 @@
 		F55362491D543F15000FFD7E /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
 		F553624D1D546435000FFD7E /* HomeHeaderTypeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeHeaderTypeCell.h; sourceTree = "<group>"; };
 		F553624E1D546435000FFD7E /* HomeHeaderTypeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeHeaderTypeCell.m; sourceTree = "<group>"; };
+		F554FF661DADEB6700597262 /* DiscountFoodCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DiscountFoodCell.h; path = daZhongDianPing/Home/View/DiscountFoodCell.h; sourceTree = SOURCE_ROOT; };
+		F554FF671DADEB6700597262 /* DiscountFoodCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DiscountFoodCell.m; path = daZhongDianPing/Home/View/DiscountFoodCell.m; sourceTree = SOURCE_ROOT; };
 		F55BF8DD1D9E41BD008718DD /* DiscountTypeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DiscountTypeCell.h; path = daZhongDianPing/Home/Controller/DiscountTypeCell.h; sourceTree = SOURCE_ROOT; };
 		F55BF8DE1D9E41BD008718DD /* DiscountTypeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DiscountTypeCell.m; path = daZhongDianPing/Home/Controller/DiscountTypeCell.m; sourceTree = SOURCE_ROOT; };
 		F55BF8E01D9E4E58008718DD /* DiscountAllTypeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscountAllTypeController.h; sourceTree = "<group>"; };
@@ -147,6 +153,16 @@
 		F5814F491DA88A0B0058E32D /* DiscountAllTypeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DiscountAllTypeModel.m; path = daZhongDianPing/Discount/Controller/DiscountAllTypeModel.m; sourceTree = SOURCE_ROOT; };
 		F5814F4B1DA8CB970058E32D /* DiscountAllTypeHeadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DiscountAllTypeHeadCell.h; path = daZhongDianPing/Discount/Controller/DiscountAllTypeHeadCell.h; sourceTree = SOURCE_ROOT; };
 		F5814F4C1DA8CB970058E32D /* DiscountAllTypeHeadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DiscountAllTypeHeadCell.m; path = daZhongDianPing/Discount/Controller/DiscountAllTypeHeadCell.m; sourceTree = SOURCE_ROOT; };
+		F58362BA1DAB7DA800EB45A2 /* TTBBTabbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTBBTabbarController.h; sourceTree = "<group>"; };
+		F58362BB1DAB7DA800EB45A2 /* TTBBTabbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTBBTabbarController.m; sourceTree = "<group>"; };
+		F58362BD1DAB7DB300EB45A2 /* SXHeadLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXHeadLine.h; sourceTree = "<group>"; };
+		F58362BE1DAB7DB300EB45A2 /* SXHeadLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXHeadLine.m; sourceTree = "<group>"; };
+		F588A5C11DAC8B1B0036EF9A /* FoodSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodSearchViewController.h; sourceTree = "<group>"; };
+		F588A5C21DAC8B1B0036EF9A /* FoodSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodSearchViewController.m; sourceTree = "<group>"; };
+		F588A5C71DACDEF30036EF9A /* FoodSearchHeadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodSearchHeadCell.h; sourceTree = "<group>"; };
+		F588A5C81DACDEF30036EF9A /* FoodSearchHeadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodSearchHeadCell.m; sourceTree = "<group>"; };
+		F588A5CA1DACF9C50036EF9A /* FoodSearchHostoryListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodSearchHostoryListCell.h; sourceTree = "<group>"; };
+		F588A5CB1DACF9C50036EF9A /* FoodSearchHostoryListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodSearchHostoryListCell.m; sourceTree = "<group>"; };
 		F59416F11D891FFA0004CD28 /* newDiscountCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = newDiscountCell.h; sourceTree = "<group>"; };
 		F59416F21D891FFA0004CD28 /* newDiscountCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = newDiscountCell.m; sourceTree = "<group>"; };
 		F59DC4DB1D8E44FE0070F504 /* homeLikeListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = homeLikeListCell.h; sourceTree = "<group>"; };
@@ -155,6 +171,8 @@
 		F59DC4DF1D8E74D60070F504 /* homeLikeListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = homeLikeListModel.m; sourceTree = "<group>"; };
 		F5BDD2A41D890289005B42DB /* webViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = webViewController.h; sourceTree = "<group>"; };
 		F5BDD2A51D890289005B42DB /* webViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = webViewController.m; sourceTree = "<group>"; };
+		F5FDE84B1DAE137A005E8937 /* DiscountFoodModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DiscountFoodModel.h; path = daZhongDianPing/Home/View/DiscountFoodModel.h; sourceTree = SOURCE_ROOT; };
+		F5FDE84C1DAE137A005E8937 /* DiscountFoodModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DiscountFoodModel.m; path = daZhongDianPing/Home/View/DiscountFoodModel.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,8 +260,6 @@
 				F55DEBED1D9A57CB00C93A27 /* citydict.plist */,
 				9B5009F71D52EB6E006E6A6D /* main.m */,
 				9B500A2A1D5310F4006E6A6D /* PrefixHeader.pch */,
-				9B500A3A1D5325CF006E6A6D /* TTBBTabbarController.h */,
-				9B500A3B1D5325CF006E6A6D /* TTBBTabbarController.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -269,8 +285,8 @@
 		9B500A2B1D531393006E6A6D /* other */ = {
 			isa = PBXGroup;
 			children = (
+				F58362B91DAB7DA800EB45A2 /*  CustomView */,
 				F56E879B1D93CA4200F363C7 /* tool */,
-				F51F55461D911AD300E86329 /*  CustomView */,
 				9B500A331D531EE4006E6A6D /* BaseViewController */,
 				F57BAC281D993A0D002A145E /* macro.h */,
 				F57BAC291D993AA5002A145E /* Constant.h */,
@@ -345,14 +361,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F51F55461D911AD300E86329 /*  CustomView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = " CustomView";
-			path = " customView";
-			sourceTree = "<group>";
-		};
 		F55362351D543E96000FFD7E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -364,6 +372,8 @@
 				F55DEBE81D9A23FE00C93A27 /* TTBBCitySelectController.m */,
 				F54501B21D9CE9B800D7903D /* TTBBCitySearchResultController.h */,
 				F54501B31D9CE9B800D7903D /* TTBBCitySearchResultController.m */,
+				F588A5C11DAC8B1B0036EF9A /* FoodSearchViewController.h */,
+				F588A5C21DAC8B1B0036EF9A /* FoodSearchViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -390,6 +400,10 @@
 				F59416F21D891FFA0004CD28 /* newDiscountCell.m */,
 				F59DC4DB1D8E44FE0070F504 /* homeLikeListCell.h */,
 				F59DC4DC1D8E44FE0070F504 /* homeLikeListCell.m */,
+				F588A5C71DACDEF30036EF9A /* FoodSearchHeadCell.h */,
+				F588A5C81DACDEF30036EF9A /* FoodSearchHeadCell.m */,
+				F588A5CA1DACF9C50036EF9A /* FoodSearchHostoryListCell.h */,
+				F588A5CB1DACF9C50036EF9A /* FoodSearchHostoryListCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -433,6 +447,8 @@
 			children = (
 				F5814F481DA88A0B0058E32D /* DiscountAllTypeModel.h */,
 				F5814F491DA88A0B0058E32D /* DiscountAllTypeModel.m */,
+				F5FDE84B1DAE137A005E8937 /* DiscountFoodModel.h */,
+				F5FDE84C1DAE137A005E8937 /* DiscountFoodModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -446,6 +462,8 @@
 				F55BF8E41D9E5C58008718DD /* DiscountAllTypeCell.m */,
 				F5814F4B1DA8CB970058E32D /* DiscountAllTypeHeadCell.h */,
 				F5814F4C1DA8CB970058E32D /* DiscountAllTypeHeadCell.m */,
+				F554FF661DADEB6700597262 /* DiscountFoodCell.h */,
+				F554FF671DADEB6700597262 /* DiscountFoodCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -506,6 +524,17 @@
 				F57BAC201D98C5F4002A145E /* MineTypeButtonCell.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		F58362B91DAB7DA800EB45A2 /*  CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				F58362BD1DAB7DB300EB45A2 /* SXHeadLine.h */,
+				F58362BE1DAB7DB300EB45A2 /* SXHeadLine.m */,
+				F58362BA1DAB7DA800EB45A2 /* TTBBTabbarController.h */,
+				F58362BB1DAB7DA800EB45A2 /* TTBBTabbarController.m */,
+			);
+			path = " CustomView";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -691,9 +720,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F53353691D951B1200F42801 /* DZLoginViewController.m in Sources */,
+				F58362BC1DAB7DA800EB45A2 /* TTBBTabbarController.m in Sources */,
 				F59DC4DD1D8E44FE0070F504 /* homeLikeListCell.m in Sources */,
 				9B5009FE1D52EB6E006E6A6D /* ViewController.m in Sources */,
-				9B500A3C1D5325CF006E6A6D /* TTBBTabbarController.m in Sources */,
 				F553623A1D543E96000FFD7E /* HomeViewController.m in Sources */,
 				F53353601D95090E00F42801 /* UserInfoManager.m in Sources */,
 				F55DEBE91D9A23FE00C93A27 /* TTBBCitySelectController.m in Sources */,
@@ -704,18 +733,23 @@
 				9B500A321D531817006E6A6D /* NetWorkRequestSingleton.m in Sources */,
 				F553624C1D543F15000FFD7E /* MineViewController.m in Sources */,
 				F5BDD2A61D890289005B42DB /* webViewController.m in Sources */,
+				F554FF681DADEB6700597262 /* DiscountFoodCell.m in Sources */,
 				F53353661D950F2800F42801 /* fileCacheManager.m in Sources */,
 				F55DEBEC1D9A520900C93A27 /* SelectCityCell.m in Sources */,
 				F56E87A21D93CD2000F363C7 /* popTableview.m in Sources */,
 				F5814F4D1DA8CB970058E32D /* DiscountAllTypeHeadCell.m in Sources */,
 				F57BAC241D991C86002A145E /* DZUserInfoViewController.m in Sources */,
 				F57BAC2B1D993AA5002A145E /* Constant.m in Sources */,
+				F58362BF1DAB7DB300EB45A2 /* SXHeadLine.m in Sources */,
+				F5FDE84D1DAE137A005E8937 /* DiscountFoodModel.m in Sources */,
 				F59DC4E01D8E74D60070F504 /* homeLikeListModel.m in Sources */,
 				F5814F4A1DA88A0B0058E32D /* DiscountAllTypeModel.m in Sources */,
 				F55BF8E51D9E5C58008718DD /* DiscountAllTypeCell.m in Sources */,
 				F56E87B11D93E5AD00F363C7 /* normalCell.m in Sources */,
+				F588A5C91DACDEF30036EF9A /* FoodSearchHeadCell.m in Sources */,
 				F553624F1D546435000FFD7E /* HomeHeaderTypeCell.m in Sources */,
 				F56E879F1D93CA9C00F363C7 /* DXPopover.m in Sources */,
+				F588A5CC1DACF9C50036EF9A /* FoodSearchHostoryListCell.m in Sources */,
 				F57BAC211D98C5F4002A145E /* MineTypeButtonCell.m in Sources */,
 				F54501B41D9CE9B800D7903D /* TTBBCitySearchResultController.m in Sources */,
 				F55BF8DF1D9E41BD008718DD /* DiscountTypeCell.m in Sources */,
@@ -723,6 +757,7 @@
 				F55362401D543ED1000FFD7E /* DiscoverViewController.m in Sources */,
 				9B5009F81D52EB6E006E6A6D /* main.m in Sources */,
 				9B500A361D531F37006E6A6D /* BaseNavigationController.m in Sources */,
+				F588A5C31DAC8B1B0036EF9A /* FoodSearchViewController.m in Sources */,
 				F55BF8E21D9E4E58008718DD /* DiscountAllTypeController.m in Sources */,
 				F55362461D543EF7000FFD7E /* DiscountViewController.m in Sources */,
 			);

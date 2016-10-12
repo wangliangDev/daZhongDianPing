@@ -262,7 +262,7 @@
 
 -(void)dismiss
 {
-    
+    [self.searchBar resignFirstResponder];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 -(void)removeBg
@@ -528,7 +528,15 @@
 {
     
     [searchBar setShowsCancelButton:YES animated:YES];
-    
+    for(UIView *view in  [[[searchBar subviews] objectAtIndex:0] subviews]) {
+        if([view isKindOfClass:[NSClassFromString(@"UINavigationButton") class]]) {
+            UIButton * cancel =(UIButton *)view;
+            [cancel setTitle:@"取消" forState:UIControlStateNormal];
+           
+            cancel.titleLabel.font = [UIFont systemFontOfSize:14];
+        }
+    }
+
     if (searchBar.text.length == 0 || [searchBar.text isEqualToString:@""]) {
         
          [self searchBeginEdit];
@@ -540,6 +548,9 @@
     
    
 }
+
+
+
 
 // 当搜索内容变化时，执行该方法。
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText

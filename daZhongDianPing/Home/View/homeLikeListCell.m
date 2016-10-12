@@ -96,7 +96,7 @@
             
             make.right.equalTo(self).offset(-5);
             make.bottom.equalTo(self).offset(-10);
-            make.width.equalTo(@50);
+            make.width.equalTo(@70);
         }];
         
         

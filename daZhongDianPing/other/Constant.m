@@ -13,6 +13,7 @@
 
 NSString *const loginFlag = @"loginFlag";
 NSString *const cityNameKey = @"cityNameKey";
+NSString *const searchHostory = @"searchHostory";
 
 
 @end

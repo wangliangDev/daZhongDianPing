@@ -16,6 +16,7 @@
 #import "DXPopover.h"
 #import "popTableview.h"
 #import "TTBBCitySelectController.h"
+#import "FoodSearchViewController.h"
 
 #define HEADERTYPECELL @"HomeHeaderTypeCell"
 #define NEWDISCOUNTCELL @"NewDicountCell"
@@ -35,6 +36,7 @@
 }
 @property(nonatomic, strong) DXPopover *popover;
 @property(nonatomic,strong)UIButton *cityButton;
+@property(nonatomic,strong)UIButton *searchButton;
 @end
 
 
@@ -125,7 +127,7 @@
         
         if (cityNmae.length > 0) {
             
-            [_cityButton setTitle:cityNmae forState:UIControlStateNormal];
+            [_cityButton setTitle:[NSString stringWithFormat:@"%@ v",cityNmae] forState:UIControlStateNormal];
             
         }else{
             
@@ -135,6 +137,36 @@
     
     return _cityButton;
 }
+
+-(UIButton*)searchButton
+{
+    
+    if (!_searchButton) {
+        
+        _searchButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _searchButton.frame = CGRectMake(0, 0, 220, 30);
+        _searchButton.backgroundColor = kWhiteColor;
+        _searchButton.layer.cornerRadius = 15;
+        [_searchButton addTarget:self action:@selector(foodSearch) forControlEvents:UIControlEventTouchUpInside];
+        
+        UIImageView *imageView = [[UIImageView alloc]init];
+        imageView.image = [UIImage imageNamed:@"homesSearch"];
+        imageView.frame = CGRectMake(10, 7, 15, 15);
+        [_searchButton addSubview:imageView];
+        
+        UILabel *label = [UILabel new];
+        label.font = kFont(11);
+        label.textColor = kGrayColor;
+        label.text = @"输入商家，店铺，地址";
+        label.frame = CGRectMake(CGRectGetMaxX(imageView.frame)+10, 7, CGRectGetWidth(_searchButton.frame)-50, 15);
+        [_searchButton addSubview:label];
+        
+        
+    }
+    
+    return _searchButton;
+}
+
 
 -(void)createBarItemButton
 {
@@ -148,6 +180,8 @@
     
     UIBarButtonItem *leftItem = [[UIBarButtonItem alloc]initWithCustomView:self.cityButton];
     self.navigationItem.leftBarButtonItem = leftItem;
+    
+    self.navigationItem.titleView = self.searchButton;
   
 }
 
@@ -310,14 +344,27 @@
         
         [fileCacheManager saveObject:city fileName:cityNameKey];
         
-         [_cityButton setTitle:city forState:UIControlStateNormal];
+         [_cityButton setTitle:[NSString stringWithFormat:@"%@ v",city] forState:UIControlStateNormal];
     };
     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:cityselect];
     
-    [self presentViewController:nav animated:YES completion:^{
-        
-    }];
+    [self presentViewController:nav animated:YES completion:nil];
 }
+
+-(void)foodSearch
+{
+    
+    FoodSearchViewController *foodsearch = [FoodSearchViewController new];
+    
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:foodsearch];
+    
+    [self presentViewController:nav animated:NO completion:nil];
+
+}
+
+
+
+
 @end
 
 

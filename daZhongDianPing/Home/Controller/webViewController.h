@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseNavigationController.h"
 
-@interface webViewController : UIViewController{
+@interface webViewController : BaseNavigationController{
     
     
 }
