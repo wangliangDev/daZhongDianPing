@@ -29,6 +29,12 @@
 		F553624C1D543F15000FFD7E /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F55362491D543F15000FFD7E /* MineViewController.m */; };
 		F553624F1D546435000FFD7E /* HomeHeaderTypeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F553624E1D546435000FFD7E /* HomeHeaderTypeCell.m */; };
 		F554FF681DADEB6700597262 /* DiscountFoodCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F554FF671DADEB6700597262 /* DiscountFoodCell.m */; };
+		F558E0841DAF28DC007EDDA7 /* FindGoodShopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F558E0831DAF28DC007EDDA7 /* FindGoodShopCell.m */; };
+		F558E0871DAF3767007EDDA7 /* DiscoverTopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F558E0861DAF3767007EDDA7 /* DiscoverTopCell.m */; };
+		F558E08A1DAF3969007EDDA7 /* DiscoverTopMocel.m in Sources */ = {isa = PBXBuildFile; fileRef = F558E0891DAF3969007EDDA7 /* DiscoverTopMocel.m */; };
+		F558E08D1DAF9233007EDDA7 /* DiscoverAskCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F558E08C1DAF9233007EDDA7 /* DiscoverAskCell.m */; };
+		F558E0901DAF9687007EDDA7 /* DiscoverAskModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F558E08F1DAF9687007EDDA7 /* DiscoverAskModel.m */; };
+		F558E0931DAFA4C3007EDDA7 /* Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = F558E0921DAFA4C3007EDDA7 /* Singleton.m */; };
 		F55BF8DF1D9E41BD008718DD /* DiscountTypeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F55BF8DE1D9E41BD008718DD /* DiscountTypeCell.m */; };
 		F55BF8E21D9E4E58008718DD /* DiscountAllTypeController.m in Sources */ = {isa = PBXBuildFile; fileRef = F55BF8E11D9E4E58008718DD /* DiscountAllTypeController.m */; };
 		F55BF8E51D9E5C58008718DD /* DiscountAllTypeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F55BF8E41D9E5C58008718DD /* DiscountAllTypeCell.m */; };
@@ -121,6 +127,18 @@
 		F553624E1D546435000FFD7E /* HomeHeaderTypeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeHeaderTypeCell.m; sourceTree = "<group>"; };
 		F554FF661DADEB6700597262 /* DiscountFoodCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DiscountFoodCell.h; path = daZhongDianPing/Home/View/DiscountFoodCell.h; sourceTree = SOURCE_ROOT; };
 		F554FF671DADEB6700597262 /* DiscountFoodCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DiscountFoodCell.m; path = daZhongDianPing/Home/View/DiscountFoodCell.m; sourceTree = SOURCE_ROOT; };
+		F558E0821DAF28DC007EDDA7 /* FindGoodShopCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FindGoodShopCell.h; path = daZhongDianPing/Home/View/FindGoodShopCell.h; sourceTree = SOURCE_ROOT; };
+		F558E0831DAF28DC007EDDA7 /* FindGoodShopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FindGoodShopCell.m; path = daZhongDianPing/Home/View/FindGoodShopCell.m; sourceTree = SOURCE_ROOT; };
+		F558E0851DAF3767007EDDA7 /* DiscoverTopCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DiscoverTopCell.h; path = daZhongDianPing/Home/View/DiscoverTopCell.h; sourceTree = SOURCE_ROOT; };
+		F558E0861DAF3767007EDDA7 /* DiscoverTopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DiscoverTopCell.m; path = daZhongDianPing/Home/View/DiscoverTopCell.m; sourceTree = SOURCE_ROOT; };
+		F558E0881DAF3969007EDDA7 /* DiscoverTopMocel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DiscoverTopMocel.h; path = daZhongDianPing/Home/View/DiscoverTopMocel.h; sourceTree = SOURCE_ROOT; };
+		F558E0891DAF3969007EDDA7 /* DiscoverTopMocel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DiscoverTopMocel.m; path = daZhongDianPing/Home/View/DiscoverTopMocel.m; sourceTree = SOURCE_ROOT; };
+		F558E08B1DAF9233007EDDA7 /* DiscoverAskCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DiscoverAskCell.h; path = daZhongDianPing/Home/View/DiscoverAskCell.h; sourceTree = SOURCE_ROOT; };
+		F558E08C1DAF9233007EDDA7 /* DiscoverAskCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DiscoverAskCell.m; path = daZhongDianPing/Home/View/DiscoverAskCell.m; sourceTree = SOURCE_ROOT; };
+		F558E08E1DAF9687007EDDA7 /* DiscoverAskModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DiscoverAskModel.h; path = daZhongDianPing/Home/View/DiscoverAskModel.h; sourceTree = SOURCE_ROOT; };
+		F558E08F1DAF9687007EDDA7 /* DiscoverAskModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DiscoverAskModel.m; path = daZhongDianPing/Home/View/DiscoverAskModel.m; sourceTree = SOURCE_ROOT; };
+		F558E0911DAFA4C3007EDDA7 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
+		F558E0921DAFA4C3007EDDA7 /* Singleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Singleton.m; sourceTree = "<group>"; };
 		F55BF8DD1D9E41BD008718DD /* DiscountTypeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DiscountTypeCell.h; path = daZhongDianPing/Home/Controller/DiscountTypeCell.h; sourceTree = SOURCE_ROOT; };
 		F55BF8DE1D9E41BD008718DD /* DiscountTypeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DiscountTypeCell.m; path = daZhongDianPing/Home/Controller/DiscountTypeCell.m; sourceTree = SOURCE_ROOT; };
 		F55BF8E01D9E4E58008718DD /* DiscountAllTypeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscountAllTypeController.h; sourceTree = "<group>"; };
@@ -291,6 +309,8 @@
 				F57BAC281D993A0D002A145E /* macro.h */,
 				F57BAC291D993AA5002A145E /* Constant.h */,
 				F57BAC2A1D993AA5002A145E /* Constant.m */,
+				F558E0911DAFA4C3007EDDA7 /* Singleton.h */,
+				F558E0921DAFA4C3007EDDA7 /* Singleton.m */,
 			);
 			path = other;
 			sourceTree = "<group>";
@@ -420,6 +440,10 @@
 		F553623E1D543ED1000FFD7E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F558E0881DAF3969007EDDA7 /* DiscoverTopMocel.h */,
+				F558E0891DAF3969007EDDA7 /* DiscoverTopMocel.m */,
+				F558E08E1DAF9687007EDDA7 /* DiscoverAskModel.h */,
+				F558E08F1DAF9687007EDDA7 /* DiscoverAskModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -427,6 +451,12 @@
 		F553623F1D543ED1000FFD7E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F558E0821DAF28DC007EDDA7 /* FindGoodShopCell.h */,
+				F558E0831DAF28DC007EDDA7 /* FindGoodShopCell.m */,
+				F558E0851DAF3767007EDDA7 /* DiscoverTopCell.h */,
+				F558E0861DAF3767007EDDA7 /* DiscoverTopCell.m */,
+				F558E08B1DAF9233007EDDA7 /* DiscoverAskCell.h */,
+				F558E08C1DAF9233007EDDA7 /* DiscoverAskCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -720,6 +750,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F53353691D951B1200F42801 /* DZLoginViewController.m in Sources */,
+				F558E0841DAF28DC007EDDA7 /* FindGoodShopCell.m in Sources */,
 				F58362BC1DAB7DA800EB45A2 /* TTBBTabbarController.m in Sources */,
 				F59DC4DD1D8E44FE0070F504 /* homeLikeListCell.m in Sources */,
 				9B5009FE1D52EB6E006E6A6D /* ViewController.m in Sources */,
@@ -745,14 +776,19 @@
 				F59DC4E01D8E74D60070F504 /* homeLikeListModel.m in Sources */,
 				F5814F4A1DA88A0B0058E32D /* DiscountAllTypeModel.m in Sources */,
 				F55BF8E51D9E5C58008718DD /* DiscountAllTypeCell.m in Sources */,
+				F558E08A1DAF3969007EDDA7 /* DiscoverTopMocel.m in Sources */,
+				F558E0901DAF9687007EDDA7 /* DiscoverAskModel.m in Sources */,
 				F56E87B11D93E5AD00F363C7 /* normalCell.m in Sources */,
 				F588A5C91DACDEF30036EF9A /* FoodSearchHeadCell.m in Sources */,
 				F553624F1D546435000FFD7E /* HomeHeaderTypeCell.m in Sources */,
 				F56E879F1D93CA9C00F363C7 /* DXPopover.m in Sources */,
 				F588A5CC1DACF9C50036EF9A /* FoodSearchHostoryListCell.m in Sources */,
+				F558E0871DAF3767007EDDA7 /* DiscoverTopCell.m in Sources */,
 				F57BAC211D98C5F4002A145E /* MineTypeButtonCell.m in Sources */,
 				F54501B41D9CE9B800D7903D /* TTBBCitySearchResultController.m in Sources */,
+				F558E0931DAFA4C3007EDDA7 /* Singleton.m in Sources */,
 				F55BF8DF1D9E41BD008718DD /* DiscountTypeCell.m in Sources */,
+				F558E08D1DAF9233007EDDA7 /* DiscoverAskCell.m in Sources */,
 				F5691C591D87AC60000E19A4 /* TTBBScrollViewButton.m in Sources */,
 				F55362401D543ED1000FFD7E /* DiscoverViewController.m in Sources */,
 				9B5009F81D52EB6E006E6A6D /* main.m in Sources */,

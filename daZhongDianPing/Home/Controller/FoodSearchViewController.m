@@ -318,7 +318,7 @@
         theCell = cell;
     }
     
-    
+    theCell.selectionStyle = UITableViewCellSelectionStyleNone;
     return theCell;
 }
 

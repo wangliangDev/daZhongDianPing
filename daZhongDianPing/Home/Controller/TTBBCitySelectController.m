@@ -47,7 +47,7 @@
 
 -(void)viewDidLoad
 {
-    
+    self.edgesForExtendedLayout = UIRectEdgeNone;
     [self initObject];
     self.title = @"城市选择";
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -111,7 +111,7 @@
     if (!_backGroundButton) {
         
         _backGroundButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        _backGroundButton.frame = CGRectMake(0, 104, KSCREEN_WIDTH, KSCREEN_HEIGHT-104);
+        _backGroundButton.frame = CGRectMake(0, 40, KSCREEN_WIDTH, KSCREEN_HEIGHT-40);
         _backGroundButton.alpha = 0;
         _backGroundButton.backgroundColor = kBlackColor;
         [_backGroundButton addTarget:self action:@selector(removeBg) forControlEvents:UIControlEventTouchUpInside];
@@ -158,7 +158,7 @@
     if (!_searchResultController) {
         
         _searchResultController = [TTBBCitySearchResultController new];
-        _searchResultController.view.frame = CGRectMake(0, 104, KSCREEN_WIDTH, KSCREEN_HEIGHT-104);
+        _searchResultController.view.frame = CGRectMake(0, 40, KSCREEN_WIDTH, KSCREEN_HEIGHT-40);
         [self addChildViewController:_searchResultController];
         [self.view addSubview:_searchResultController.view];
         _searchResultController.didSelectRowAtIndexPathBlock = ^(NSString *cityName){
@@ -439,10 +439,10 @@
     }
 }
 
--(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
-{
-    return 20;
-}
+//-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+//{
+//    return 20;
+//}
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     return 20;
@@ -570,6 +570,18 @@
     
     [self CancelButtonAction];
 }
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
+        CGFloat sectionHeaderHeight = 20;
+        if (scrollView.contentOffset.y<=sectionHeaderHeight&&scrollView.contentOffset.y>=0) {
+            scrollView.contentInset = UIEdgeInsetsMake(-scrollView.contentOffset.y, 0, 0, 0);
+        } else if (scrollView.contentOffset.y>=sectionHeaderHeight) {
+            scrollView.contentInset = UIEdgeInsetsMake(-sectionHeaderHeight, 0, 0, 0);
+        }
+    
+}
+
+
 
 @end
 

@@ -45,8 +45,7 @@
 
 #define iOS7 [[[UIDevice currentDevice]systemVersion] floatValue] >= 7.0
 #define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
-/***  普通字体 */
-#define kFont(size) [UIFont systemFontOfSize:size]
+
 /***  粗体 */
 #define kBoldFont(size) [UIFont boldSystemFontOfSize:size]
 /***  普通字体 */

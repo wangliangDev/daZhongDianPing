@@ -40,7 +40,7 @@
     
     int buttonWidth = (KSCREEN_WIDTH - SPACEING *4) / array.count;
     
-    [self.allFoodButton setTitle:[NSString stringWithFormat:@"全部%@个美味专题",[buttonDict objectForKey:@"allCount"]] forState:UIControlStateNormal];
+    [self.allFoodButton setTitle:[NSString stringWithFormat:@"全部%@个美味专题 >",[buttonDict objectForKey:@"allCount"]] forState:UIControlStateNormal];
     [self.contentView addSubview:self.allFoodButton];
     
     [array enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
