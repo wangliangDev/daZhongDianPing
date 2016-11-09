@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 
-
+typedef void(^typeSelect)(UIButton*button);
 @interface HomeHeaderTypeCell : UITableViewCell{
     
     
@@ -18,5 +18,5 @@
 }
 
 @property(nonatomic,strong)NSDictionary *buttonDict;
-
+@property(nonatomic,strong)typeSelect typeSelectBlock;
 @end

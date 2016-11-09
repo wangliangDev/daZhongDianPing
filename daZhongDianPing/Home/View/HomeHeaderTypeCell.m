@@ -41,6 +41,13 @@
     TTBBScrollViewButton *ttbbs = [[TTBBScrollViewButton alloc]init];
     ttbbs.frame = CGRectMake(0, 0, KSCREEN_WIDTH, 180);
     ttbbs.buttonDict = buttonDict;
+    ttbbs.typeSelectBlock = ^(UIButton*button){
+        
+        if (_typeSelectBlock) {
+            
+            _typeSelectBlock(button);
+        }
+    };
     [self.contentView addSubview:ttbbs];
     
 }

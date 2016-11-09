@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		186E37531DD1AF8C004240C2 /* DZShopListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186E37521DD1AF8C004240C2 /* DZShopListViewController.m */; };
+		186E37561DD1C5A7004240C2 /* TTBBImageTextSortButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 186E37551DD1C5A7004240C2 /* TTBBImageTextSortButton.m */; };
+		18E954F21DD2C4F9009EB11E /* DZShopListTypeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E954F11DD2C4F9009EB11E /* DZShopListTypeCell.m */; };
 		30DAE69A375FF7B43EE055C3 /* libPods-daZhongDianPing.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90046466CF64B6E8BDFDE9BB /* libPods-daZhongDianPing.a */; };
 		9B5009F81D52EB6E006E6A6D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B5009F71D52EB6E006E6A6D /* main.m */; };
 		9B5009FB1D52EB6E006E6A6D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B5009FA1D52EB6E006E6A6D /* AppDelegate.m */; };
@@ -81,6 +84,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		186E37511DD1AF8C004240C2 /* DZShopListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZShopListViewController.h; sourceTree = "<group>"; };
+		186E37521DD1AF8C004240C2 /* DZShopListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZShopListViewController.m; sourceTree = "<group>"; };
+		186E37541DD1C5A7004240C2 /* TTBBImageTextSortButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTBBImageTextSortButton.h; sourceTree = "<group>"; };
+		186E37551DD1C5A7004240C2 /* TTBBImageTextSortButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTBBImageTextSortButton.m; sourceTree = "<group>"; };
+		18E954F01DD2C4F9009EB11E /* DZShopListTypeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZShopListTypeCell.h; sourceTree = "<group>"; };
+		18E954F11DD2C4F9009EB11E /* DZShopListTypeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZShopListTypeCell.m; sourceTree = "<group>"; };
 		4005D390DF1C9F277C28D607 /* Pods-daZhongDianPing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-daZhongDianPing.release.xcconfig"; path = "Pods/Target Support Files/Pods-daZhongDianPing/Pods-daZhongDianPing.release.xcconfig"; sourceTree = "<group>"; };
 		90046466CF64B6E8BDFDE9BB /* libPods-daZhongDianPing.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-daZhongDianPing.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B5009F31D52EB6E006E6A6D /* daZhongDianPing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = daZhongDianPing.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -394,6 +403,8 @@
 				F54501B31D9CE9B800D7903D /* TTBBCitySearchResultController.m */,
 				F588A5C11DAC8B1B0036EF9A /* FoodSearchViewController.h */,
 				F588A5C21DAC8B1B0036EF9A /* FoodSearchViewController.m */,
+				186E37511DD1AF8C004240C2 /* DZShopListViewController.h */,
+				186E37521DD1AF8C004240C2 /* DZShopListViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -424,6 +435,8 @@
 				F588A5C81DACDEF30036EF9A /* FoodSearchHeadCell.m */,
 				F588A5CA1DACF9C50036EF9A /* FoodSearchHostoryListCell.h */,
 				F588A5CB1DACF9C50036EF9A /* FoodSearchHostoryListCell.m */,
+				18E954F01DD2C4F9009EB11E /* DZShopListTypeCell.h */,
+				18E954F11DD2C4F9009EB11E /* DZShopListTypeCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -563,6 +576,8 @@
 				F58362BE1DAB7DB300EB45A2 /* SXHeadLine.m */,
 				F58362BA1DAB7DA800EB45A2 /* TTBBTabbarController.h */,
 				F58362BB1DAB7DA800EB45A2 /* TTBBTabbarController.m */,
+				186E37541DD1C5A7004240C2 /* TTBBImageTextSortButton.h */,
+				186E37551DD1C5A7004240C2 /* TTBBImageTextSortButton.m */,
 			);
 			path = " CustomView";
 			sourceTree = "<group>";
@@ -772,7 +787,9 @@
 				F57BAC241D991C86002A145E /* DZUserInfoViewController.m in Sources */,
 				F57BAC2B1D993AA5002A145E /* Constant.m in Sources */,
 				F58362BF1DAB7DB300EB45A2 /* SXHeadLine.m in Sources */,
+				186E37561DD1C5A7004240C2 /* TTBBImageTextSortButton.m in Sources */,
 				F5FDE84D1DAE137A005E8937 /* DiscountFoodModel.m in Sources */,
+				186E37531DD1AF8C004240C2 /* DZShopListViewController.m in Sources */,
 				F59DC4E01D8E74D60070F504 /* homeLikeListModel.m in Sources */,
 				F5814F4A1DA88A0B0058E32D /* DiscountAllTypeModel.m in Sources */,
 				F55BF8E51D9E5C58008718DD /* DiscountAllTypeCell.m in Sources */,
@@ -794,6 +811,7 @@
 				9B5009F81D52EB6E006E6A6D /* main.m in Sources */,
 				9B500A361D531F37006E6A6D /* BaseNavigationController.m in Sources */,
 				F588A5C31DAC8B1B0036EF9A /* FoodSearchViewController.m in Sources */,
+				18E954F21DD2C4F9009EB11E /* DZShopListTypeCell.m in Sources */,
 				F55BF8E21D9E4E58008718DD /* DiscountAllTypeController.m in Sources */,
 				F55362461D543EF7000FFD7E /* DiscountViewController.m in Sources */,
 			);

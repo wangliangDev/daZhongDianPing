@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 
-
+typedef void(^typeSelect)(UIButton*button);
 
 @interface TTBBScrollViewButton : UIView<UIScrollViewDelegate>{
     
@@ -19,7 +19,7 @@
     float topSpace;
     NSInteger scrollViewHeight;
 }
-@property(nonatomic,retain)NSDictionary *buttonDict;
-
+@property(nonatomic,strong)NSDictionary *buttonDict;
+@property(nonatomic,strong)typeSelect typeSelectBlock;
 
 @end

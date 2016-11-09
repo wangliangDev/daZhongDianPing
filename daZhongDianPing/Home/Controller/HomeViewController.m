@@ -17,6 +17,7 @@
 #import "popTableview.h"
 #import "TTBBCitySelectController.h"
 #import "FoodSearchViewController.h"
+#import "DZShopListViewController.h"
 
 #define HEADERTYPECELL @"HomeHeaderTypeCell"
 #define NEWDISCOUNTCELL @"NewDicountCell"
@@ -47,12 +48,16 @@
 -(void)viewDidLoad
 {
     self.view.backgroundColor = [UIColor whiteColor];
-    [self.navigationController.navigationBar setBarTintColor:kOrangeColor];
+   
     [self initObject];
     [self createBarItemButton];
     [self createTableView];
 }
-
+-(void)viewWillAppear:(BOOL)animated
+{
+    
+     [self.navigationController.navigationBar setBarTintColor:kOrangeColor];
+}
 
 -(void)initObject{
     buttonDict = [NSMutableDictionary new];
@@ -200,8 +205,13 @@
         HomeHeaderTypeCell *Cell = [[HomeHeaderTypeCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:HEADERTYPECELL];
         Cell.selectionStyle = UITableViewCellSelectionStyleNone;
         Cell.buttonDict = buttonDict;
-        
+        Cell.typeSelectBlock = ^(UIButton*button){
+            
+            [self typeButtonAction:button];
+            
+        };
         theCell = Cell;
+        
     }else if (indexPath.section == 1){
         
         newDiscountCell *Cell = [[newDiscountCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:NEWDISCOUNTCELL];
@@ -363,7 +373,25 @@
 }
 
 
+#pragma mark --eventrespond
 
+-(void)typeButtonAction:(UIButton*)button{
+    
+    if (button.tag == 0) {
+        
+    }else if (button.tag == 1)
+    {
+        
+        
+    }
+    else if (button.tag == 2)
+    {
+        DZShopListViewController *shopList = [DZShopListViewController new];
+        [shopList setHidesBottomBarWhenPushed:YES];
+        [self.navigationController pushViewController:shopList animated:YES];
+        
+    }
+}
 
 @end
 

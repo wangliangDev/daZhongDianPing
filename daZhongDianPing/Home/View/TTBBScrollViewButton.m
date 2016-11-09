@@ -196,7 +196,11 @@
 -(void)buttonAction:(UIButton*)button
 {
     
-    NSLog(@"buttonbutton---%ld",(long)button.tag);
+    if (_typeSelectBlock) {
+        
+        _typeSelectBlock(button);
+    }
+    
 }
 
 
