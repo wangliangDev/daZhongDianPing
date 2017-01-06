@@ -20,6 +20,6 @@ typedef void(^typeSelect)(UIButton*button);
     NSInteger scrollViewHeight;
 }
 @property(nonatomic,strong)NSDictionary *buttonDict;
-@property(nonatomic,strong)typeSelect typeSelectBlock;
+@property(nonatomic,copy)typeSelect typeSelectBlock;
 
 @end

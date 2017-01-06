@@ -16,5 +16,5 @@ typedef void(^searchType)(UIButton *button);
 }
 
 @property(nonatomic,strong)NSArray *buttonArray;
-@property(nonatomic,strong)searchType searchTypeBlock;
+@property(nonatomic,copy)searchType searchTypeBlock;
 @end

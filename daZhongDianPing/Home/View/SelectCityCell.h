@@ -15,6 +15,6 @@
 }
 
 @property(nonatomic,strong)NSArray *buttonArray;
-@property(nonatomic,strong)citySelectBlock citySelectBlock;
+@property(nonatomic,copy)citySelectBlock citySelectBlock;
 
 @end

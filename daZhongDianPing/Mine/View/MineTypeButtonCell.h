@@ -21,6 +21,6 @@ typedef void(^typeBlock)(int buttonTag);
 @property(nonatomic,strong)UIButton *middleButton;
 @property(nonatomic,strong)UIButton *rightButton;
 @property(nonatomic,strong)NSArray *buttonArray;
-@property(nonatomic,strong)typeBlock typeBlock;
+@property(nonatomic,copy)typeBlock typeBlock;
 
 @end

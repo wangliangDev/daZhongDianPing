@@ -18,5 +18,5 @@ typedef void(^typeSelect)(UIButton*button);
 }
 
 @property(nonatomic,strong)NSDictionary *buttonDict;
-@property(nonatomic,strong)typeSelect typeSelectBlock;
+@property(nonatomic,copy)typeSelect typeSelectBlock;
 @end

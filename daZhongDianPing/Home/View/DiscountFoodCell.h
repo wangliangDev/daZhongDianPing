@@ -19,7 +19,7 @@ typedef void(^allFoodBlock)();
 @property(nonatomic,strong)NSDictionary *buttonDict;
 @property(nonatomic,strong)UILabel *titleLabel;
 @property(nonatomic,strong)UIButton *allFoodButton;
-@property(nonatomic,strong)foodActionBlock foodActionBlock;
-@property(nonatomic,strong)allFoodBlock allFoodBlock;
+@property(nonatomic,copy)foodActionBlock foodActionBlock;
+@property(nonatomic,copy)allFoodBlock allFoodBlock;
 
 @end

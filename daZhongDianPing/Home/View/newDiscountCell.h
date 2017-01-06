@@ -20,7 +20,7 @@ typedef void(^rightBlock)();
 }
 @property(nonatomic,strong)NSString *leftUrl;
 @property(nonatomic,strong)NSString *rightUrl;
-@property(nonatomic,strong)leftBlock leftBlock;
-@property(nonatomic,strong)rightBlock rightBlock;
+@property(nonatomic,copy)leftBlock leftBlock;
+@property(nonatomic,copy)rightBlock rightBlock;
 
 @end

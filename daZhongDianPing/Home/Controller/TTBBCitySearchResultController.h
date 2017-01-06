@@ -18,6 +18,6 @@ typedef void(^scrollViewDidScrollBlock)();
 
 @property(nonatomic,strong)NSArray *dataArray;
 @property(nonatomic,strong)UITableView *tableView;
-@property(nonatomic,strong)didSelectRowAtIndexPathBlock didSelectRowAtIndexPathBlock;
-@property(nonatomic,strong)scrollViewDidScrollBlock scrollViewDidScrollBlock;
+@property(nonatomic,copy)didSelectRowAtIndexPathBlock didSelectRowAtIndexPathBlock;
+@property(nonatomic,copy)scrollViewDidScrollBlock scrollViewDidScrollBlock;
 @end

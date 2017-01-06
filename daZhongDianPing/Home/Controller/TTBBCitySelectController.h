@@ -14,7 +14,7 @@ typedef void(^setCityButtonBlock)(NSString *cityName);
     
     
 }
-@property(nonatomic,strong)setCityButtonBlock setCityButtonBlock;
+@property(nonatomic,copy)setCityButtonBlock setCityButtonBlock;
 @end
 
 

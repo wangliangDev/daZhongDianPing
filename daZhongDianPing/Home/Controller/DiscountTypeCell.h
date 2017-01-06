@@ -22,6 +22,6 @@ typedef void(^hotIndexSelectBlock)(int index);
 @property(nonatomic,strong)UILabel *hotLabel;
 @property(nonatomic,strong)SXHeadLine *headLine;
 
-@property(nonatomic,strong)typeActionBlock typeActionBlock;
-@property(nonatomic,strong)hotIndexSelectBlock hotIndexSelectBlock;
+@property(nonatomic,copy)typeActionBlock typeActionBlock;
+@property(nonatomic,copy)hotIndexSelectBlock hotIndexSelectBlock;
 @end

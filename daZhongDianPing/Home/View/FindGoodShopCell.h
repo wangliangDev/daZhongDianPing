@@ -16,6 +16,6 @@ typedef void(^typeActionBlock)(UIButton *button);
 }
 @property(nonatomic,strong)NSDictionary *contentDict;
 @property(nonatomic,strong)UILabel *titleLabel;
-@property(nonatomic,strong)allGoodShopBlock allGoodShopBlock;
-@property(nonatomic,strong)typeActionBlock typeActionBlock;
+@property(nonatomic,copy)allGoodShopBlock allGoodShopBlock;
+@property(nonatomic,copy)typeActionBlock typeActionBlock;
 @end
