@@ -33,6 +33,8 @@
     NSMutableArray *dataArray;
     
     UIButton *funButton;
+    
+    UIButton *addButton;
   
 }
 @property(nonatomic, strong) DXPopover *popover;
