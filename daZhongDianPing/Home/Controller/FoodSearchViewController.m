@@ -18,7 +18,12 @@
     NSArray *dataArray;
     NSMutableArray *hostoryListArray;
     
+    
+    
 }
+
+
+
 @property(nonatomic,strong)UITableView *tableView;
 @property(nonatomic,strong)UISearchBar *searchBar;
 @property(nonatomic,strong)UIView *tableFootView;
